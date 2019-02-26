@@ -11,7 +11,13 @@
 #include <iostream>
 #include <string>
 
+#include <string>
+#include <fstream>
+
 char yesOrNo;
+
+ifstream inputUserProfile;
+string userProfile;
 
 using namespace std;
 
@@ -24,8 +30,27 @@ void cinYesOrNo(string yNQuestion)
 	cin.ignore();
 }
 
+void getUserProfile()
+{
+	inputUserProfile.open("IY1S461_CW1M_APPENDIX_2_PRCW_PRACTCW1.txt");
+
+	while (getline(inputUserProfile, userProfile))
+	{
+		inputUserProfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cout <<  userProfile << "\n";
+	}
+	
+	
+	inputUserProfile.close();
+	cinYesOrNo("Would you like to see the User Profile? ");
+	if (yesOrNo == 'Y' || yesOrNo == 'y')
+	{
+		cout << "User Profile\n" << userProfile << "\n";
+	}
+}
 int main()
 {
+	getUserProfile();
     std::cout << "Hello World!\n"; 
 }
 
