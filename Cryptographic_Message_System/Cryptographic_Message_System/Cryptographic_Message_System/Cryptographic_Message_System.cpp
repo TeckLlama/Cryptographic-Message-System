@@ -51,6 +51,7 @@ void saveFile(string fileName, string stringToSave)
 
 void createUserProfile()
 {
+
 	cout << "Enter a Username --> ";
 	getline(cin, username);
 	cout << "Enter First Name --> ";
@@ -76,6 +77,7 @@ void createUserProfile()
 	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + to_string(userAge) + "\n" + userTime + "\n" + userEncryption + "\n" + userMessage;
 	saveFile(username, userProfile);
 	cout << "\n" << userProfile;
+
 }
 
 
