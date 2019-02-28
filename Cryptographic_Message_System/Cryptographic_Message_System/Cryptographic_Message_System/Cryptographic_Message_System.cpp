@@ -10,7 +10,6 @@
 #include "Time.h"
 #include <iostream>
 #include <string>
-
 #include <string>
 #include <fstream>
 
@@ -18,6 +17,17 @@ char yesOrNo;
 
 ifstream inputUserProfile;
 string userProfile;
+
+string username;
+string userFirstName;
+string userLastName;
+int userAge;
+string userTimeHH;
+string userTimeMM;
+string userTimeSS;
+string userTime;
+string userEncryption;
+string userMessage;
 
 using namespace std;
 
@@ -30,6 +40,37 @@ void cinYesOrNo(string yNQuestion)
 	cin.ignore();
 }
 
+
+int main()
+{
+	cout << "Enter a Username --> ";
+	cin >> username;
+	cout << "Enter First Name --> ";
+	cin >> userFirstName;
+	cout << "Enter Last Name  --> ";
+	cin >> userLastName;
+	cout << "Enter Age        --> ";
+	cin >> userAge;
+	cout << "Enter Time HH    --> ";
+	cin >> userTimeHH;
+	cout << "Enter Time MM    --> ";
+	cin >> userTimeMM;
+	cout << "Enter Time SS    --> ";
+	cin >> userTimeSS;
+	userTime = userTimeHH + ":" + userTimeMM + ":" + userTimeSS;
+	cout << "Enter Encryption --> ";
+	cin >> userEncryption;
+	cout << "Enter Message    --> ";
+	cin >> userMessage;
+
+    std::cout << "Hello World!\n"; 
+}
+
+
+
+
+
+
 void getUserProfile()
 {
 	inputUserProfile.open("IY1S461_CW1M_APPENDIX_2_PRCW_PRACTCW1.txt");
@@ -37,10 +78,10 @@ void getUserProfile()
 	while (getline(inputUserProfile, userProfile))
 	{
 		inputUserProfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		cout <<  userProfile << "\n";
+		cout << userProfile << "\n";
 	}
-	
-	
+
+
 	inputUserProfile.close();
 	cinYesOrNo("Would you like to see the User Profile? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
@@ -48,9 +89,3 @@ void getUserProfile()
 		cout << "User Profile\n" << userProfile << "\n";
 	}
 }
-int main()
-{
-	getUserProfile();
-    std::cout << "Hello World!\n"; 
-}
-
