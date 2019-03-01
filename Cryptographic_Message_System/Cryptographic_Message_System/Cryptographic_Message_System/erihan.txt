@@ -3,5 +3,5 @@ elliot
 rihan
 23
 12:12:12
-a
-abcdefghijklmnopqrstuvwxyz
+12
+abcdefghijklmnopqrstuvw

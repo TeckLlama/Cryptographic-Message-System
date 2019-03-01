@@ -76,11 +76,9 @@ void createUserProfile()
 	usernameList += username + "";
 	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + to_string(userAge) + "\n" + userTime + "\n" + userEncryption + "\n" + userMessage;
 	saveFile(username, userProfile);
-	cout << "\n" << userProfile;
-
+	// There for test to print userProfile before saving
+	//cout << "\n" << userProfile
 }
-
-
 
 string encryptDecryptMessageXOR;
 
@@ -97,62 +95,62 @@ void encryptDecryptXOR(string message, string key)
 
 string encryptDecryptMessageROT13;
 
-//void encryptDecryptROT13(string message)
-//{
-//	encryptDecryptMessageROT13 = message;
-//	for (int i = 0; i < message.size(); i++)
-//	{
-//		if ((isalpha(message[i])))
-//		{
-//			if ((tolower(message[i]) >= 'a') <= 'm')
-//			{
-//				encryptDecryptMessageROT13[i] += 13;
-//			}
-//			else if ((tolower(message[i]) > 'm') <= 'z')
-//			{
-//				encryptDecryptMessageROT13[i] -= 13;
-//			}
-//		}			
-//		else
-//		{
-//			
-//		}
-//	}
-//	saveFile("MessageROT13", encryptDecryptMessageROT13);
-//	
-//	
-//}
+void encryptDecryptROT13(string message)
+{
+	encryptDecryptMessageROT13 = message;
+	for (int i = 0; i < message.size(); i++)
+	{
+		if ((isalpha(message[i])))
+		{
+			if ((tolower(message[i]) >= 'a') <= 'm')
+			{
+				encryptDecryptMessageROT13[i] += 13;
+			}
+			if ((tolower(message[i]) >= 'n') <= 'z')
+			{
+				encryptDecryptMessageROT13[i]- 13;
+			}
+		}			
+		else
+		{
+			
+		}
+	}
+	saveFile("MessageROT13", encryptDecryptMessageROT13);
+	
+	
+}
 
 
 string tempEncryptedMessage;
 
-void decriptCeaser(string encryptedMessage)
-{
-	string tempEncryptedMessage = "abcdefjhijkklmnopqrstyuzwxyz";
-	int messageLength = (int)tempEncryptedMessage.length();
-	for (int i = 0; i < messageLength; i++)
-	{ // this for loop runs thru the possible shifts
-		for (int shift = 0; shift < 13; shift++)
-		{ // this for loop changes the character in the tempEncryptedMessage string
-			if (isalpha(tempEncryptedMessage[i]))
-			{// isalpha is an built in method to check if a character is in alphabet 
-				if (tempEncryptedMessage[i] == 'z')
-				{ // this loops back to start of alphabet without it alphabet becomes symbols 
-					tempEncryptedMessage[i] = 'a';
-				}
-				else if (tempEncryptedMessage[i] == 'Z')
-				{
-					tempEncryptedMessage[i] = 'A';
-				}
-				else
-				{
-					tempEncryptedMessage[i]++;
-				}
-			}
-		}		
-	}
-	saveFile("MessageROT13", tempEncryptedMessage);
-}
+//void decriptCeaser(string encryptedMessage)
+//{
+//	string tempEncryptedMessage = encryptedMessage;
+//	int messageLength = (int)tempEncryptedMessage.length();
+//	for (int i = 0; i < messageLength; i++)
+//	{ // this for loop runs thru the possible shifts
+//		for (int shift = 0; shift < 13; shift++)
+//		{ // this for loop changes the character in the tempEncryptedMessage string
+//			if (isalpha(tempEncryptedMessage[i]))
+//			{// isalpha is an built in method to check if a character is in alphabet 
+//				if (tempEncryptedMessage[i] == 'z')
+//				{ // this loops back to start of alphabet without it alphabet becomes symbols 
+//					tempEncryptedMessage[i] = 'a';
+//				}
+//				else if (tempEncryptedMessage[i] == 'Z')
+//				{
+//					tempEncryptedMessage[i] = 'A';
+//				}
+//				else
+//				{
+//					tempEncryptedMessage[i]++;
+//				}
+//			}
+//		}		
+//	}
+//	saveFile("MessageROT13", tempEncryptedMessage);
+//}
 
 
 int main()
@@ -168,8 +166,9 @@ int main()
 		createUserProfile();
 		//encryptDecryptXOR(userMessage, userLastName);
 		//cout << "\n\n" << encryptDecryptMessageXOR;
-		decriptCeaser(userMessage);
-		cout << "\n\n" << tempEncryptedMessage;
+		cout << "\n\n" << userMessage << "\n\n";
+		encryptDecryptROT13(userMessage);
+		cout << "\n\n" << encryptDecryptMessageROT13;
 	}
 	
 
