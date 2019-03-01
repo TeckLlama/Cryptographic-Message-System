@@ -3,5 +3,5 @@ elliot
 rihan
 23
 12:12:12
-12
-abcdefghijklmnopqrstuvw
+xor
+wasgone yo 

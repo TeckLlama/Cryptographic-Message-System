@@ -1,5 +1,2 @@
 ﻿  Cryptographic_Message_System.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(101): warning C4018: '<': signed/unsigned mismatch
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(105): warning C4804: '<=': unsafe use of type 'bool' in operation
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(109): warning C4804: '<=': unsafe use of type 'bool' in operation
   Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System\Cryptographic_Message_System\Debug\Cryptographic_Message_System.exe
