@@ -14,25 +14,25 @@
 
 
 
-void createNewUser()
-{
-	cout << "Enter a Username --> ";
-	cin >> User.username;
-	cout << "Enter First Name --> ";
-	cin >> userFirstName;
-	cout << "Enter Last Name  --> ";
-	cin >> userLastName;
-	cout << "Enter Age        --> ";
-	cin >> userAge;
-	cout << "Enter Time HH    --> ";
-	cin >> userTimeHH;
-	cout << "Enter Time MM    --> ";
-	cin >> userTimeMM;
-	cout << "Enter Time SS    --> ";
-	cin >> userTimeSS;
-	userTime = userTimeHH + ":" + userTimeMM + ":" + userTimeSS;
-	cout << "Enter Encryption --> ";
-	cin >> userEncryption;
-	cout << "Enter Message    --> ";
-	cin >> userMessage;
-}
+//void createNewUser()
+//{
+//	cout << "Enter a Username --> ";
+//	cin >> username;
+//	cout << "Enter First Name --> ";
+//	cin >> userFirstName;
+//	cout << "Enter Last Name  --> ";
+//	cin >> userLastName;
+//	cout << "Enter Age        --> ";
+//	cin >> userAge;
+//	cout << "Enter Time HH    --> ";
+//	cin >> userTimeHH;
+//	cout << "Enter Time MM    --> ";
+//	cin >> userTimeMM;
+//	cout << "Enter Time SS    --> ";
+//	cin >> userTimeSS;
+//	userTime = userTimeHH + ":" + userTimeMM + ":" + userTimeSS;
+//	cout << "Enter Encryption --> ";
+//	cin >> userEncryption;
+//	cout << "Enter Message    --> ";
+//	cin >> userMessage;
+//}

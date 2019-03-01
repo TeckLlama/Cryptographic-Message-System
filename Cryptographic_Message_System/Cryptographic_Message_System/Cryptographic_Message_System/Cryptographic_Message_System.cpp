@@ -10,8 +10,8 @@
 #include "Time.h"
 #include <iostream>
 #include <string>
-#include <string>
 #include <fstream>
+
 
 using namespace std;
 
@@ -97,34 +97,61 @@ void encryptDecryptXOR(string message, string key)
 
 string encryptDecryptMessageROT13;
 
-void encryptDecryptROT13(string message)
+//void encryptDecryptROT13(string message)
+//{
+//	encryptDecryptMessageROT13 = message;
+//	for (int i = 0; i < message.size(); i++)
+//	{
+//		if ((isalpha(message[i])))
+//		{
+//			if ((tolower(message[i]) >= 'a') <= 'm')
+//			{
+//				encryptDecryptMessageROT13[i] += 13;
+//			}
+//			else if ((tolower(message[i]) > 'm') <= 'z')
+//			{
+//				encryptDecryptMessageROT13[i] -= 13;
+//			}
+//		}			
+//		else
+//		{
+//			
+//		}
+//	}
+//	saveFile("MessageROT13", encryptDecryptMessageROT13);
+//	
+//	
+//}
+
+
+string tempEncryptedMessage;
+
+void decriptCeaser(string encryptedMessage)
 {
-	string encryptDecryptMessageROT13 = message;
-	int messageLength = (int)encryptDecryptMessageROT13.length();
-	for (int shift = 1; shift < 13; shift++)
-	{
-		for (int i = 0; i < messageLength; i++)
+	string tempEncryptedMessage = "abcdefjhijkklmnopqrstyuzwxyz";
+	int messageLength = (int)tempEncryptedMessage.length();
+	for (int i = 0; i < messageLength; i++)
+	{ // this for loop runs thru the possible shifts
+		for (int shift = 0; shift < 13; shift++)
 		{ // this for loop changes the character in the tempEncryptedMessage string
-			if (isalpha(encryptDecryptMessageROT13[i]))
+			if (isalpha(tempEncryptedMessage[i]))
 			{// isalpha is an built in method to check if a character is in alphabet 
-				if (encryptDecryptMessageROT13[i] == 'a')
+				if (tempEncryptedMessage[i] == 'z')
 				{ // this loops back to start of alphabet without it alphabet becomes symbols 
-					encryptDecryptMessageROT13[i] = 'z';
+					tempEncryptedMessage[i] = 'a';
 				}
-				else if (encryptDecryptMessageROT13[i] == 'A')
+				else if (tempEncryptedMessage[i] == 'Z')
 				{
-					encryptDecryptMessageROT13[i] = 'Z';
+					tempEncryptedMessage[i] = 'A';
 				}
 				else
 				{
-					encryptDecryptMessageROT13[i]++;
+					tempEncryptedMessage[i]++;
 				}
 			}
 		}		
 	}
-	saveFile("MessageROT13", encryptDecryptMessageROT13);
-	
-	
+	saveFile("MessageROT13", tempEncryptedMessage);
 }
 
 
@@ -139,10 +166,10 @@ int main()
 	else
 	{
 		createUserProfile();
-		encryptDecryptXOR(userMessage, userLastName);
-		cout << "\n\n" << encryptDecryptMessageXOR;
-		encryptDecryptROT13(userMessage);
-		cout << "\n\n" << encryptDecryptMessageROT13;
+		//encryptDecryptXOR(userMessage, userLastName);
+		//cout << "\n\n" << encryptDecryptMessageXOR;
+		decriptCeaser(userMessage);
+		cout << "\n\n" << tempEncryptedMessage;
 	}
 	
 
