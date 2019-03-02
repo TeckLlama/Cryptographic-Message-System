@@ -28,7 +28,10 @@ void cinYesOrNo(string yNQuestion)
 string username;
 string userFirstName;
 string userLastName;
+
 int userAge;
+string userAgeString;
+
 string userTimeHH;
 string userTimeMM;
 string userTimeSS;
@@ -43,7 +46,34 @@ void saveFile(string fileName, string stringToSave)
 	ofstream fileToSave(fileName + ".txt");
 	fileToSave << stringToSave;
 	fileToSave.close();
-	cout << "\n\n" << fileName << " has been saved\n";
+	cout << "\n" << fileName << " has been saved\n";
+}
+ifstream inputUserProfileFile;
+
+void openProfile()
+{
+	cout << "Enter your Username --> ";
+	cin >> username;
+	inputUserProfileFile.open(username + ".txt");
+	if (inputUserProfileFile.fail())
+	{
+		do {
+			cout << "Couldn't open Profile " << endl;
+			cout << "Enter your Username --> ";
+			cin >> username;
+			inputUserProfileFile.open(username + ".txt");
+		} while (!inputUserProfileFile.is_open());
+	}
+	
+	getline(inputUserProfileFile, username);
+	getline(inputUserProfileFile, userFirstName);
+	getline(inputUserProfileFile, userLastName);
+	getline(inputUserProfileFile, userAgeString);
+	getline(inputUserProfileFile, userTime);
+	getline(inputUserProfileFile, userEncryption);
+	getline(inputUserProfileFile, userMessage);
+	inputUserProfileFile.close();	
+	cout << "User Login Sucessfull!\n";
 }
 
 void createUserProfile()
@@ -81,8 +111,7 @@ void userLogIn()
 	cinYesOrNo("Do you have an account already? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		cout << "Enter your Username --> ";
-		cin >> username;
+		openProfile();
 	}
 	else
 	{
@@ -101,6 +130,7 @@ void encryptDecryptXOR(string message, string key)
 		encryptDecryptMessageXOR += message[i] ^ (int(key[i % keyLength]));
 	}
 	saveFile("MessageXOR", encryptDecryptMessageXOR);
+	cout << "\nEncrypted Message XOR\n" << encryptDecryptMessageXOR;
 }
 
 string encryptDecryptMessageROT13;
@@ -130,45 +160,17 @@ void encryptDecryptROT13(string message)
 			}
 		}
 	}
-	saveFile("MessageROT13", encryptDecryptMessageROT13);	
+	saveFile("MessageROT13", encryptDecryptMessageROT13);
+	cout << "\nEncrypted Message ROT13\n" << encryptDecryptMessageROT13;
 }
 
-string tempEncryptedMessage;
-
-//void decriptCeaser(string encryptedMessage)
-//{
-//	string tempEncryptedMessage = encryptedMessage;
-//	int messageLength = (int)tempEncryptedMessage.length();
-//	for (int i = 0; i < messageLength; i++)
-//	{ // this for loop runs thru the possible shifts
-//		for (int shift = 0; shift < 13; shift++)
-//		{ // this for loop changes the character in the tempEncryptedMessage string
-//			if (isalpha(tempEncryptedMessage[i]))
-//			{// isalpha is an built in method to check if a character is in alphabet 
-//				if (tempEncryptedMessage[i] == 'z')
-//				{ // this loops back to start of alphabet without it alphabet becomes symbols 
-//					tempEncryptedMessage[i] = 'a';
-//				}
-//				else if (tempEncryptedMessage[i] == 'Z')
-//				{
-//					tempEncryptedMessage[i] = 'A';
-//				}
-//				else
-//				{
-//					tempEncryptedMessage[i]++;
-//				}
-//			}
-//		}		
-//	}
-//	saveFile("MessageROT13", tempEncryptedMessage);
-//}
 
 int main()
 {
 	userLogIn();
 	encryptDecryptXOR(userMessage, userLastName);
-	cout << "\n\n" << encryptDecryptMessageXOR;
+	
 	encryptDecryptROT13(userMessage);
-	cout << "\n\n" << encryptDecryptMessageROT13;
+	
     std::cout << "\n\nHello World!\n"; 
 }
