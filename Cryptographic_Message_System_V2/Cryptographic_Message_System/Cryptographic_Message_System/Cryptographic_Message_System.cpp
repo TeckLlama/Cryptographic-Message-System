@@ -7,10 +7,11 @@
 
 #include "pch.h"
 //#include "User.h"
-//#include "Time.h"
+//#include "Time.h" 
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <math.h>
 
 using namespace std;
 // Variable required for cinYesOrNo(string yNQuestion)
@@ -65,7 +66,6 @@ void openProfile()
 			inputUserProfileFile.open(username + ".txt");
 		} while (!inputUserProfileFile.is_open());
 	}
-
 	getline(inputUserProfileFile, username);
 	getline(inputUserProfileFile, userFirstName);
 	getline(inputUserProfileFile, userLastName);
@@ -163,6 +163,11 @@ void encryptDecryptROT13(string message)
 	}
 	saveFile("MessageROT13", encryptDecryptMessageROT13);
 	cout << "\nEncrypted Message ROT13\n" << encryptDecryptMessageROT13;
+}
+
+void encryptRSA()
+{
+
 }
 
 

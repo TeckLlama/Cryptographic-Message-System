@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+d:\cryptographic_message_system_v2\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(102): error C3867: 'Time::timeHHMMSS': non-standard syntax; use '&' to create a pointer to member
+  Time.cpp
+  User.cpp
+  Generating Code...
+d:\cryptographic_message_system_v2\cryptographic_message_system\cryptographic_message_system\time.cpp(16): error C4716: 'Time::timeHH': must return a value
+d:\cryptographic_message_system_v2\cryptographic_message_system\cryptographic_message_system\time.cpp(30): error C4716: 'Time::timeMM': must return a value
+d:\cryptographic_message_system_v2\cryptographic_message_system\cryptographic_message_system\time.cpp(43): error C4716: 'Time::timeSS': must return a value
