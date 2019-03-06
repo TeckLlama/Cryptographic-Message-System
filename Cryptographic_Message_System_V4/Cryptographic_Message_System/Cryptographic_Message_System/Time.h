@@ -13,7 +13,7 @@ public:
 	int userTimeMM;
 	int userTimeSS;
 
-	void timeHHMMSS();
+	std::string timeHHMMSS();
 	int timeHH();
 	int timeMM();
 	int timeSS();
