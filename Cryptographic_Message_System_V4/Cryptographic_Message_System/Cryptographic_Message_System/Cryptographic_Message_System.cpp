@@ -9,6 +9,7 @@
 #include "User.h"
 #include "XOR.h"
 #include "ROT13.h"
+#include "ROT47.h"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -16,6 +17,7 @@
 User t;
 XOR x;
 ROT13 r;
+ROT47 R;
 
 void encryptionMethod()
 {
@@ -26,6 +28,11 @@ void encryptionMethod()
 	if (t.userEncryption == "ROT13")
 	{
 		r.encryptDecryptROT13(t.userMessage);
+	}
+	if (t.userEncryption == "ROT47")
+	{
+		R.encryptROT47(t.userMessage);
+		R.decryptROT47(R.encryptedROT47);
 	}
 }
 

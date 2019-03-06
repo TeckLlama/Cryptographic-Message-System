@@ -153,6 +153,8 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="ROT13.h" />
+    <ClInclude Include="ROT47.h" />
+    <ClInclude Include="RSA.h" />
     <ClInclude Include="SaveFile.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="User.h" />
@@ -167,6 +169,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ROT13.cpp" />
+    <ClCompile Include="ROT47.cpp" />
+    <ClCompile Include="RSA.cpp" />
     <ClCompile Include="SaveFile.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="User.cpp" />

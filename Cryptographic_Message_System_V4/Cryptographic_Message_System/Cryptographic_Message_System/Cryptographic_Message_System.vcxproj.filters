@@ -33,6 +33,12 @@
     <ClInclude Include="ROT13.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RSA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ROT47.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -54,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ROT13.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RSA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ROT47.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

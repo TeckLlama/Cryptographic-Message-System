@@ -40,7 +40,7 @@ void User::openProfile()
 	std::getline(inputUserProfileFile, userAgeString);
 	std::getline(inputUserProfileFile, a.userTimeHHMMSS);
 	std::getline(inputUserProfileFile, userEncryption);
-	if (userEncryption != "XOR" && userEncryption != "ROT13")
+	if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
 	{
 		std::cout << "Error in saved profile check text file or create new profile\n";
 		userLogIn();
@@ -63,15 +63,15 @@ void User::createUserProfile()
 	std::cin.ignore();
 	std::cin.clear();
 	a.timeHHMMSS();
-	std::cout << "Encryption Methods XOR, ROT13, more to be added\n";
+	std::cout << "Encryption Methods XOR, ROT13, ROT47, more to be added\n";
 	std::cout << "Enter Encryption --> ";
 	std::getline (std::cin, userEncryption);
-	if (userEncryption != "XOR" && userEncryption != "ROT13")
+	if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
 	{
 		do {
 			std::cout << "Error Enter Encryption --> ";
 			std::getline(std::cin, userEncryption);
-		} while (std::cin.fail() && userEncryption != "XOR" && userEncryption != "ROT13");
+		} while (std::cin.fail() && userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47");
 	}
 	std::cout << "Enter Message    --> ";
 	std::getline (std::cin, userMessage);

@@ -1,7 +1,7 @@
 erihan
-Elliot
-Rihan
+elliot
+rihan
 23
-12:21:12
-ROT13
-Hello world!!
+12:12:12
+ROT47
+Wag1 testing RoT47 [[]]]{{{}}}}/*--*/++\|\|??'\@
