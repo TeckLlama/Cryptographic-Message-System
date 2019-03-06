@@ -1,9 +1,9 @@
 ﻿  Cryptographic_Message_System.cpp
-  SaveFile.cpp
-  User.cpp
+  ROT13.cpp
+  XOR.cpp
   Generating code
-  111 of 267 functions (41.6%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    31 functions had inline decision re-evaluated but remain unchanged
+  31 of 262 functions (11.8%) were compiled, the rest were copied from previous compilation.
+    6 functions were new in current compilation
+    35 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V4\Cryptographic_Message_System\Release\Cryptographic_Message_System.exe
