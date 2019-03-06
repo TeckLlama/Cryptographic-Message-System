@@ -2,7 +2,6 @@
 #include "User.h"
 #include "Time.h"
 #include "SaveFile.h"
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -24,16 +23,16 @@ void User::openProfile()
 	std::ifstream inputUserProfileFile;
 	std::cout << "Enter your Username --> ";
 	std::cin >> username;
-	inputUserProfileFile.open(username + ".txt");
+	inputUserProfileFile.open("./Users/" + username + ".txt");
 	if (inputUserProfileFile.fail())
-	{
-		do {
+	{// if input fails retry intput
+		do {// untill profile is open
 			std::cout << "Couldn't open Profile \n";
 			std::cout << "Enter your Username --> ";
 			std::cin >> username;
 			inputUserProfileFile.open(username + ".txt");
 		} while (!inputUserProfileFile.is_open());
-	}
+	}//  read user profile line by line
 	std::getline(inputUserProfileFile, username);
 	std::getline(inputUserProfileFile, userFirstName);
 	std::getline(inputUserProfileFile, userLastName);
@@ -41,7 +40,7 @@ void User::openProfile()
 	std::getline(inputUserProfileFile, a.userTimeHHMMSS);
 	std::getline(inputUserProfileFile, userEncryption);
 	if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
-	{
+	{// if userEncryption not valid resets back to userLogin
 		std::cout << "Error in saved profile check text file or create new profile\n";
 		userLogIn();
 	}
@@ -51,7 +50,7 @@ void User::openProfile()
 }
 
 void User::createUserProfile()
-{
+{// getline used for input of strings 
 	std::cout << "Enter a Username --> ";
 	std::getline (std::cin, username);
 	std::cout << "Enter First Name --> ";
@@ -59,7 +58,7 @@ void User::createUserProfile()
 	std::cout << "Enter Last Name  --> ";
 	std::getline (std::cin, userLastName);
 	std::cout << "Enter Age        --> ";
-	std::cin >> userAge;
+	std::cin >> userAge;// cin to input age
 	std::cin.ignore();
 	std::cin.clear();
 	a.timeHHMMSS();
@@ -67,8 +66,8 @@ void User::createUserProfile()
 	std::cout << "Enter Encryption --> ";
 	std::getline (std::cin, userEncryption);
 	if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
-	{
-		do {
+	{// if userEncryption not valid retry 
+		do {// intput untill valid 
 			std::cout << "Error Enter Encryption --> ";
 			std::getline(std::cin, userEncryption);
 		} while (std::cin.fail() && userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47");
@@ -77,13 +76,12 @@ void User::createUserProfile()
 	std::getline (std::cin, userMessage);
 	//usernameList =+ username + "";
 	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
-	sF.saveFile(username, userProfile);
-	// There for test to print userProfile before saving
-	//std::cout << "\n" << userProfile
+	sF.saveFile(". /Users/"+username, userProfile);
+	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
 
 void User::userLogIn()
-{
+{// y/n input to openProfile or createUserProfile
 	cinYesOrNo("Do you have an account already? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{

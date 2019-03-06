@@ -1,10 +1,12 @@
 #include "pch.h"
 #include "ROT47.h"
 #include "SaveFile.h"
+#include "User.h"
 #include <iostream>
 #include <string>
 
 SaveFile sF4;
+
 
 void ROT47::encryptROT47(std::string message)
 {
@@ -35,22 +37,22 @@ void ROT47::decryptROT47(std::string message)
 	std::string decryptedROT47 = "";
 	for (int i = 0; i < message.length(); i++) 
 	{
-		int temp = message[i] - key;
+		int tempEncryptedChar = message[i] - key;
 		if (message[i] == 32) 
-		{// ignoring space 
+		{// ignore space 
 			decryptedROT47 += " ";
 		}
-		else if (temp < 32) 
+		else if (tempEncryptedChar < 32) 
 		{// loops ^ back to ~
-			temp += 94;
-			decryptedROT47 += temp;
+			tempEncryptedChar += 94;
+			decryptedROT47 += tempEncryptedChar;
 		}
 		else 
 		{// add decrypted character
-			decryptedROT47 += temp;
+			decryptedROT47 += tempEncryptedChar;
 		} 
 	} 
-	sF4.saveFile("DecryptedROT47", decryptedROT47);
+	sF4.saveFile("/DecryptedROT47", decryptedROT47);
 	std::cout << "\nDecrypted Message ROT47\n" << decryptedROT47;
 
 }

@@ -5,16 +5,14 @@
 class User
 {
 protected:
-
+	
 public:
 	void createUserProfile();
-	void saveFile(std::string fileName, std::string stringToSave);
 	void openProfile();
 	void userLogIn();
 	void cinYesOrNo(std::string yNQuestion);
 	char yesOrNo;
-
-	std::string username;
+	std::string username;	
 	std::string userFirstName;
 	std::string userLastName;
 	int userAge;
