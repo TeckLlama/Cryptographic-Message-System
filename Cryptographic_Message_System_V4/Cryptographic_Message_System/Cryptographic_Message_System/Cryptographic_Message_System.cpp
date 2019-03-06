@@ -4,56 +4,21 @@
 // Description: C++ program 
 // Cryptographic_Message_System.cpp: This file contains the 'main' function. Program execution begins and ends there.
 
-
 #include "pch.h"
 //#include "stdafx.h"
 #include "User.h"
 #include "Time.h" 
+#include "SaveFile.h"
 #include <iostream>
 #include <string>
 #include <fstream>
 
-//#include <math.h>
-
-using namespace std;
-
 User t;
+SaveFile sF2;
 
-// Variable required for cinYesOrNo(string yNQuestion)
-char yesOrNo;
-void cinYesOrNo(string yNQuestion)
-{ // cinYesOrNo is used to get input of Y or N from user 
-	do {
-		cout << yNQuestion << "[Y/N] --> ";
-		cin >> yesOrNo;
-	} while (!cin.fail() && yesOrNo != 'y' && yesOrNo != 'n' && yesOrNo != 'Y' && yesOrNo != 'N');
-	cin.ignore();
-}
+std::string encryptDecryptMessageXOR;
 
-void saveFile(string fileName, string stringToSave)
-{ // saveFile uses ofstream to save decrypted message to .txt
-	ofstream fileToSave(fileName + ".txt");
-	fileToSave << stringToSave;
-	fileToSave.close();
-	cout << "\n" << fileName << " has been saved\n";
-}
-
-void userLogIn()
-{
-	cinYesOrNo("Do you have an account already? ");
-	if (yesOrNo == 'Y' || yesOrNo == 'y')
-	{
-		t.openProfile();
-	}
-	else
-	{
-		t.createUserProfile();
-	}
-}
-
-string encryptDecryptMessageXOR;
-
-void encryptDecryptXOR(string message, string key)
+void encryptDecryptXOR(std::string message, std::string key)
 { // encryptDecryptXOR uses a for loop and XOR function
 	int messageLength = (int)message.length();
 	int keyLength = (int)key.length();
@@ -61,16 +26,15 @@ void encryptDecryptXOR(string message, string key)
 	{
 		encryptDecryptMessageXOR += message[i] ^ (int(key[i % keyLength]));
 	}
-	saveFile("MessageXOR", encryptDecryptMessageXOR);
-	cout << "\nEncrypted Message XOR\n" << encryptDecryptMessageXOR;
+	sF2.saveFile("MessageXOR", encryptDecryptMessageXOR);
+	std::cout << "\nEncrypted Message XOR\n" << encryptDecryptMessageXOR;
 }
 
-string encryptDecryptMessageROT13;
+std::string encryptDecryptMessageROT13;
 
-void encryptDecryptROT13(string message)
+void encryptDecryptROT13(std::string message)
 {
 	encryptDecryptMessageROT13 = message;
-
 	for (int i = 0; i < (int)encryptDecryptMessageROT13.length(); i++)
 	{
 		for (int shift = 0; shift < 13; shift++)
@@ -92,16 +56,25 @@ void encryptDecryptROT13(string message)
 			}
 		}
 	}
-	saveFile("MessageROT13", encryptDecryptMessageROT13);
-	cout << "\nEncrypted Message ROT13\n" << encryptDecryptMessageROT13;
+	sF2.saveFile("MessageROT13", encryptDecryptMessageROT13);
+	std::cout << "\nEncrypted Message ROT13\n" << encryptDecryptMessageROT13;
+}
+
+void encryptionMethod()
+{
+	if (t.userEncryption == "XOR")
+	{
+		encryptDecryptXOR(t.userMessage, t.userLastName);
+	}
+	if (t.userEncryption == "ROT13")
+	{
+		encryptDecryptROT13(t.userMessage);
+	}
 }
 
 int main()
 {
-	userLogIn();
-	encryptDecryptXOR(t.userMessage, t.userLastName);
-
-	encryptDecryptROT13(t.userMessage);
-
+	t.userLogIn();
+	encryptionMethod();
 	std::cout << "\n\nHello World!\n";
 }
