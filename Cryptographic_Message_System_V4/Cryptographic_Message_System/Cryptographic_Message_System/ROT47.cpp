@@ -28,7 +28,7 @@ void ROT47::encryptROT47(std::string message)
 			encryptedROT47 += tempMessageChar;
 		}
 	} 
-	sF4.saveFile("EncryptedROT47", encryptedROT47);
+	sF4.saveFile("./EncryptedROT47", encryptedROT47);
 	std::cout << "\nEncrypted Message ROT47\n" << encryptedROT47;
 }
 void ROT47::decryptROT47(std::string message)

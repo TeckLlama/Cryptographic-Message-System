@@ -17,6 +17,6 @@ void XOR::encryptDecryptXOR(std::string message, std::string key)
 	{// XOR by key character stagered by keyLengtg
 		encryptDecryptMessageXOR += message[i] ^ (int(key[i % keyLength]));
 	}
-	sF3.saveFile("MessageXOR", encryptDecryptMessageXOR);
+	sF3.saveFile("./MessageXOR", encryptDecryptMessageXOR);
 	std::cout << "\nEncrypted Message XOR\n" << encryptDecryptMessageXOR;
 }

@@ -30,6 +30,6 @@ void ROT13::encryptDecryptROT13(std::string message)
 			}
 		}
 	}
-	sF2.saveFile("MessageROT13", message);
+	sF2.saveFile("./MessageROT13", message);
 	std::cout << "\nEncrypted Message ROT13\n" << message;
 }
