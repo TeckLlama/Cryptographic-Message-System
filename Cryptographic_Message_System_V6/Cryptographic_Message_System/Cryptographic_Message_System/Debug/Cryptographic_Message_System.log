@@ -1,9 +1,14 @@
-﻿  Cryptographic_Message_System.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v6\cryptographic_message_system\cryptographic_message_system\debug\vc141.pdb' because it is being used by another process.
+  pch.cpp
+  Cryptographic_Message_System.cpp
   Message.cpp
   ROT13.cpp
   ROT47.cpp
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v6\cryptographic_message_system\cryptographic_message_system\rot47.cpp(12): warning C4018: '<': signed/unsigned mismatch
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v6\cryptographic_message_system\cryptographic_message_system\rot47.cpp(37): warning C4018: '<': signed/unsigned mismatch
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
   User.cpp
   XOR.cpp
   Generating Code...

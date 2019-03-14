@@ -11,11 +11,14 @@
 #include <string>
 #include <fstream>
 
+
 User t;
 Message m;
 
 int main()
 {
+	system("Title Cryptographic Message System");
+
 	t.userLogIn();
 	m.encryptMessage(t);
 	m.decryptMessage(t);

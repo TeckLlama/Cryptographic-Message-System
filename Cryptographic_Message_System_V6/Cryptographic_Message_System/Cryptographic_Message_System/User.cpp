@@ -140,7 +140,9 @@ void User::updateUserProfile()
 		std::cout << "Enter Message    --> ";
 		std::getline(std::cin, userMessage);
 	}
-
+	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
+	sF.saveFile("./Users/" + username, userProfile);
+	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
 
 void User::userLogIn()
