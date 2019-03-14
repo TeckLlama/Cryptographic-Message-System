@@ -74,7 +74,7 @@ void User::createUserProfile()
 	std::cin >> userAge;// cin to input age
 	std::cin.ignore();
 	std::cin.clear();
-	a.timeHHMMSS();
+	a.getTimeHHMMSS();
 	std::cout << "Encryption Methods XOR, ROT13, ROT47, more to be added\n";
 	std::cout << "Enter Encryption --> ";
 	std::getline (std::cin, userEncryption);
@@ -118,7 +118,7 @@ void User::updateUserProfile()
 	cinYesOrNo("Do you want to change Time? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		a.timeHHMMSS();
+		a.getTimeHHMMSS();
 	}
 	cinYesOrNo("Do you want to change Encryption Method? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')

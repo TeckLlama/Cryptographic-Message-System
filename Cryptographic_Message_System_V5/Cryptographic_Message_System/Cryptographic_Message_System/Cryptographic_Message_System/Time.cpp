@@ -2,7 +2,7 @@
 #include "Time.h"
 #include <string>
 
-int Time::timeHH()
+int Time::getTimeHH()
 {// checks input of HH is between 0 & 23 working 
 	std::cout << "Enter Time HH    --> ";
 	std::cin >> userTimeHH;
@@ -18,7 +18,7 @@ int Time::timeHH()
 	return userTimeHH;
 }
 	
-int Time::timeMM()
+int Time::getTimeMM()
 {// checks input of MM is between 0 & 59 working 
 	std::cout << "Enter Time MM    --> ";
 	std::cin >> userTimeMM;
@@ -34,7 +34,7 @@ int Time::timeMM()
 	return userTimeMM;
 }
 
-int Time::timeSS()
+int Time::getTimeSS()
 {// checks input of SS is between 0 & 59 working 
 	std::cout << "Enter Time SS    --> ";
 	std::cin >> userTimeSS;
@@ -50,12 +50,12 @@ int Time::timeSS()
 	return userTimeSS;
 }
 
-std::string Time::timeHHMMSS()
+std::string Time::getTimeHHMMSS()
 {// works but need to add error checking to ensure time is HHMMSS 
  // (if MM entered is 2 will output 12:2:12)
-	Time::timeHH();
-	Time::timeMM();
-	Time::timeSS();
+	Time::getTimeHH();
+	Time::getTimeMM();
+	Time::getTimeSS();
 	userTimeHHMMSS = std::to_string(userTimeHH) + ':' + std::to_string(userTimeMM) + ':' + std::to_string(userTimeSS);
 	std::cin.ignore();
 	std::cin.clear();
