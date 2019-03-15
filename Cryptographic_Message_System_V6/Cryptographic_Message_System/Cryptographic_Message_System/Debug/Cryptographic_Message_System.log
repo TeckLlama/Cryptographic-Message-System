@@ -1,2 +1,14 @@
-﻿  Time.cpp
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+  Message.cpp
+  ROT13.cpp
+  ROT47.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v6\cryptographic_message_system\cryptographic_message_system\rot47.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v6\cryptographic_message_system\cryptographic_message_system\rot47.cpp(35): warning C4018: '<': signed/unsigned mismatch
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
+  User.cpp
+  XOR.cpp
+  Generating Code...
   Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V6\Cryptographic_Message_System\Debug\Cryptographic_Message_System.exe

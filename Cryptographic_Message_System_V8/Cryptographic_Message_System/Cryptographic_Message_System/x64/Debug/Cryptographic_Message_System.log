@@ -1,0 +1,14 @@
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Message.cpp
+  ROT13.cpp
+  ROT47.cpp
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
+  User.cpp
+  XOR.cpp
+  Generating Code...
+  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V8\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe

@@ -1,7 +1,7 @@
 erihan
-Elliot
-Rihan
+elliot
+rihan
 23
-0:12:25
+12:12:12
 XOR
-Hello World!!!
+Hellow world 

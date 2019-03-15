@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include"User.h"
+#include "User.h"
 
 
 class Message
@@ -15,6 +15,8 @@ public:
 	std::string encryptionMethod;
 	std::string encryptedMessage;
 	std::string xorKey;
+
+	//std::string sha256(const std::string str);
 
 };
 

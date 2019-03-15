@@ -1,0 +1,4 @@
+﻿  Cryptographic_Message_System.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V7\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe

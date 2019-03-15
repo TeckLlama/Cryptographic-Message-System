@@ -10,18 +10,29 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "md5.h"
+#include <stdio.h>
+
 
 int test;
 User t;
 Message m;
+char a[] = "password";
+
+
+
 
 int main()
 {
 	system("Title Cryptographic Message System");
+	MD5 md5;
+	puts(md5.digestString(a));
+	// print the digest for a binary file on disk.
+	//puts(md5.digestFile("C:\\WINDOWS\\notepad.exe"));
 
-	t.userLogIn();
+	/*t.userLogIn();
 	m.encryptMessage(t);
-	m.decryptMessage(t);
+	m.decryptMessage(t);*/
 	std::cin >> test;
 	//std::cout << "\n\nHello World!\n";
 }

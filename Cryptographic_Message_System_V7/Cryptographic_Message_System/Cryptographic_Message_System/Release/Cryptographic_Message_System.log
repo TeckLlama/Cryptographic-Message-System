@@ -1,7 +1,16 @@
-﻿  Time.cpp
-  Generating code
-  10 of 281 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    6 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V6\Cryptographic_Message_System\Release\Cryptographic_Message_System.exe
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+  Message.cpp
+  ROT13.cpp
+  ROT47.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\rot47.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\rot47.cpp(35): warning C4018: '<': signed/unsigned mismatch
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
+  User.cpp
+  XOR.cpp
+Cryptographic_Message_System.obj : error LNK2001: unresolved external symbol _SHA256_Init
+Cryptographic_Message_System.obj : error LNK2001: unresolved external symbol _SHA256_Update
+Cryptographic_Message_System.obj : error LNK2001: unresolved external symbol _SHA256_Final
+C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V7\Cryptographic_Message_System\Release\Cryptographic_Message_System.exe : fatal error LNK1120: 3 unresolved externals
