@@ -17,21 +17,45 @@
 int test;
 User t;
 Message m;
-char a[] = "password";
+//char a[] = "password";
+char eDL;
+
+void menu()
+{
+	do {
+		std::cout << "\nEncrypt, Decrypt or Log Out[E/D/L] --> ";
+		std::cin >> eDL;
+	} while (std::cin.fail() || eDL != 'e' && eDL != 'd' && eDL != 'l' && eDL != 'E' && eDL != 'D'&& eDL != 'L');
+	std::cin.ignore();
+	if (eDL == 'e' || eDL == 'E')
+	{
+		m.encryptMessage(t);
+		menu();
+	}
+	if (eDL == 'd' || eDL == 'D')
+	{
+		m.decryptMessage(t); 
+		menu();
+	}
+	if (eDL == 'l' || eDL == 'L')
+	{
+
+		menu();
+ 	}
 
 
-
+}
 
 int main()
 {
 	system("Title Cryptographic Message System");
-	MD5 md5;
-	puts(md5.digestString(a));
-	// print the digest for a binary file on disk.
-	//puts(md5.digestFile("C:\\WINDOWS\\notepad.exe"));
+	//MD5 md5;
+	//puts(md5.digestString(a));
+	
 
-	/*t.userLogIn();
-	m.encryptMessage(t);
+	t.userLogIn();
+	menu();
+	/*
 	m.decryptMessage(t);*/
 	std::cin >> test;
 	//std::cout << "\n\nHello World!\n";

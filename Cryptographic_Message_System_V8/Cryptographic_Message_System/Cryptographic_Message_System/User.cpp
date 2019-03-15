@@ -4,8 +4,11 @@
 #include "SaveFile.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <fstream>
+#include"md5.h"
 
+MD5 md5;
 Time a;
 SaveFile sF;
 
@@ -21,8 +24,8 @@ void User::cinYesOrNo(std::string yNQuestion)
 void User::openProfile()
 {
 	std::ifstream inputUserProfileFile;
-	std::cout << "Enter your Username --> ";
-	std::cin >> username;
+	//std::cout << "Enter your Username --> ";
+	//std::cin >> username;
 	inputUserProfileFile.open("./Users/" + username + ".txt");
 	if (inputUserProfileFile.fail())
 	{// if input fails retry intput
@@ -62,6 +65,21 @@ void User::openProfile()
 
 }
 
+void User::generateSaltPassHash()
+{
+	std::cout << "Enter Username --> ";
+	std::cin >> salt;
+	std::stringstream ss;
+	ss << salt;
+	ss >> username;
+	std::cout << "Enter Password --> ";
+	std::cin >> userPasswordPlainText;
+	strcat_s(saltPlusPass, salt);
+	strcat_s(saltPlusPass, userPasswordPlainText);
+	hashedSaltPassword = md5.digestString(saltPlusPass);
+	
+}
+
 void User::createUserProfile()
 {// getline used for input of strings 
 	std::cout << "Enter a Username --> ";
@@ -94,7 +112,8 @@ void User::createUserProfile()
 	}
 	std::cout << "Enter Message    --> ";
 	std::getline (std::cin, userMessage);
-	//usernameList =+ username + "";
+	generateSaltPassHash();
+	sF.saveFile("./Users/" + username + "hash", hashedSaltPassword);
 	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
 	sF.saveFile("./Users/"+username, userProfile);
 	// COMMENTED OUT for itteration 1 screenshots
@@ -158,7 +177,24 @@ void User::userLogIn()
 	cinYesOrNo("Do you have an account already? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		openProfile();
+		generateSaltPassHash();
+		std::ifstream inputUserHash;
+		//std::cout << "Enter your Username --> ";
+		//std::cin >> username;
+		inputUserHash.open("./Users/" + username + "hash.txt");
+		if (inputUserHash.fail())
+		{// if input fails retry intput
+			do {// untill profile is open
+				generateSaltPassHash();
+				inputUserHash.open("./Users/" + username + "hash.txt");
+			} while (!inputUserHash.is_open());
+		}//  read user profile line by line
+		std::getline(inputUserHash, userSavedHash);
+		if (userSavedHash == hashedSaltPassword)
+		{
+
+			openProfile();
+		}
 	}
 	else
 	{

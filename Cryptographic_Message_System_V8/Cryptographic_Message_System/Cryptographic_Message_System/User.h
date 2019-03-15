@@ -13,7 +13,8 @@ public:
 	void updateUserProfile();
 	void cinYesOrNo(std::string yNQuestion);
 	char yesOrNo;
-	std::string username;	
+	std::string username;
+
 	std::string userFirstName;
 	std::string userLastName;
 	int userAge;
@@ -21,6 +22,21 @@ public:
 	std::string userEncryption;
 	std::string userMessage;
 	std::string userProfile;
+
+	char salt[50];
+	char userPasswordPlainText[100];
+	char saltPlusPass[150];
+
+	std::string hashedSaltPassword;
+	void generateSaltPassHash();
+
+	std::string userSavedHash;
+
+
+	
+	
+	//char* passPlusSaltToHash[];
+
 private:
 
 };
