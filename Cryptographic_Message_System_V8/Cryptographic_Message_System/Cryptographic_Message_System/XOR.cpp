@@ -45,6 +45,7 @@ void XOR::decryptProfileXOR(std::string message, std::string key, std::string us
 		encryptDecryptMessageXOR += message[i] ^ (int(key[i % keyLength]));
 	}
 	sF3.saveFile("./Users/"+username, encryptDecryptMessageXOR);
+	
 }
 
 void XOR::encryptProfileXOR(std::string message, std::string key, std::string username)

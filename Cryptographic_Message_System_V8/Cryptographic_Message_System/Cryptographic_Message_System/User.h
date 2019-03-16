@@ -32,6 +32,12 @@ public:
 
 	std::string userSavedHash;
 
+	void profileEncrypt();
+	void profileDecrypt();
+
+	void profileLogOut();
+
+
 
 	
 	

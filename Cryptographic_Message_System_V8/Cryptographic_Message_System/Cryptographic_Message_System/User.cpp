@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "User.h"
 #include "Time.h"
+#include "XOR.h"
 #include "SaveFile.h"
 #include <iostream>
 #include <string>
@@ -11,6 +12,7 @@
 MD5 md5;
 Time a;
 SaveFile sF;
+XOR x0;
 
 void User::cinYesOrNo(std::string yNQuestion)
 { // cinYesOrNo is used to get input of Y or N from user 
@@ -62,7 +64,7 @@ void User::openProfile()
 	{
 		updateUserProfile();
 	}*/
-
+	
 }
 
 void User::generateSaltPassHash()
@@ -172,6 +174,48 @@ void User::updateUserProfile()
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
 
+void User::profileEncrypt()
+{
+	std::ifstream inputUserProfileFile;
+	//std::cout << "Enter your Username --> ";
+	//std::cin >> username;
+	inputUserProfileFile.open("./Users/" + username + ".txt");
+	if (inputUserProfileFile.fail())
+	{// if input fails retry intput
+		do {// untill profile is open
+			std::cout << "Couldn't open Profile \n";
+			std::cout << "Enter your Username --> ";
+			std::cin >> username;
+			inputUserProfileFile.open(username + ".txt");
+		} while (!inputUserProfileFile.is_open());
+	}
+	std::stringstream strStream;
+	strStream << inputUserProfileFile.rdbuf();
+	std::string encryptProfile = strStream.str();
+	x0.encryptProfileXOR(encryptProfile, username, username);
+}
+
+void User::profileDecrypt()
+{
+	std::ifstream inputUserProfileFile;
+	//std::cout << "Enter your Username --> ";
+	//std::cin >> username;
+	inputUserProfileFile.open("./Users/" + username + ".txt");
+	if (inputUserProfileFile.fail())
+	{// if input fails retry intput
+		do {// untill profile is open
+			std::cout << "Couldn't open Profile \n";
+			std::cout << "Enter your Username --> ";
+			std::cin >> username;
+			inputUserProfileFile.open(username + ".txt");
+		} while (!inputUserProfileFile.is_open());
+	}
+	std::stringstream strStream;
+	strStream << inputUserProfileFile.rdbuf();
+	std::string decryptProfile = strStream.str();
+	x0.decryptProfileXOR(decryptProfile, username, username);
+}
+
 void User::userLogIn()
 {// y/n input to openProfile or createUserProfile
 	cinYesOrNo("Do you have an account already? ");
@@ -192,7 +236,7 @@ void User::userLogIn()
 		std::getline(inputUserHash, userSavedHash);
 		if (userSavedHash == hashedSaltPassword)
 		{
-
+			profileDecrypt();
 			openProfile();
 		}
 	}
@@ -200,4 +244,8 @@ void User::userLogIn()
 	{
 		createUserProfile();
 	}
+}
+void User::profileLogOut()
+{
+	profileEncrypt();
 }

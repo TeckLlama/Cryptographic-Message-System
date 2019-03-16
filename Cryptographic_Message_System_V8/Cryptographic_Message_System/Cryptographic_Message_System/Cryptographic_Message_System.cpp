@@ -39,8 +39,7 @@ void menu()
 	}
 	if (eDL == 'l' || eDL == 'L')
 	{
-
-		menu();
+		t.profileLogOut();
  	}
 
 
@@ -55,8 +54,7 @@ int main()
 
 	t.userLogIn();
 	menu();
-	/*
-	m.decryptMessage(t);*/
+
 	std::cin >> test;
 	//std::cout << "\n\nHello World!\n";
 }

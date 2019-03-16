@@ -1,2 +1,2 @@
 ROT13
-Hello World!,.,.,<><><><><>
+Hello World
