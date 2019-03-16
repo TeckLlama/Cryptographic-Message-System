@@ -14,14 +14,15 @@
 #include <stdio.h>
 
 
-int test;
+
 User t;
 Message m;
-//char a[] = "password";
-char eDL;
 
-void menu()
+
+
+int menu()
 {
+	char eDL;
 	do {
 		std::cout << "\nEncrypt, Decrypt or Log Out[E/D/L] --> ";
 		std::cin >> eDL;
@@ -40,6 +41,9 @@ void menu()
 	if (eDL == 'l' || eDL == 'L')
 	{
 		t.profileLogOut();
+		User t1;
+		t = t1;
+		return 0;
  	}
 
 
@@ -48,13 +52,6 @@ void menu()
 int main()
 {
 	system("Title Cryptographic Message System");
-	//MD5 md5;
-	//puts(md5.digestString(a));
-	
-
 	t.userLogIn();
 	menu();
-
-	std::cin >> test;
-	//std::cout << "\n\nHello World!\n";
 }

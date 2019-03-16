@@ -58,12 +58,12 @@ void User::openProfile()
 	{
 		std::cout << "\n" << userProfile <<"\n";
 	}
-	/*cinYesOrNo("\nDo you want to update your profile? ");
+	cinYesOrNo("\nDo you want to update your profile? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 		
 	{
 		updateUserProfile();
-	}*/
+	}
 	
 }
 
@@ -192,7 +192,9 @@ void User::profileEncrypt()
 	std::stringstream strStream;
 	strStream << inputUserProfileFile.rdbuf();
 	std::string encryptProfile = strStream.str();
+	inputUserProfileFile.close();
 	x0.encryptProfileXOR(encryptProfile, username, username);
+
 }
 
 void User::profileDecrypt()
@@ -213,6 +215,7 @@ void User::profileDecrypt()
 	std::stringstream strStream;
 	strStream << inputUserProfileFile.rdbuf();
 	std::string decryptProfile = strStream.str();
+	inputUserProfileFile.close();
 	x0.decryptProfileXOR(decryptProfile, username, username);
 }
 
@@ -234,11 +237,18 @@ void User::userLogIn()
 			} while (!inputUserHash.is_open());
 		}//  read user profile line by line
 		std::getline(inputUserHash, userSavedHash);
+		inputUserHash.close();
 		if (userSavedHash == hashedSaltPassword)
 		{
 			profileDecrypt();
 			openProfile();
 		}
+		else
+		{
+			std::cout << "Incorrect password or user try again\n";
+			userLogIn();
+		}
+
 	}
 	else
 	{

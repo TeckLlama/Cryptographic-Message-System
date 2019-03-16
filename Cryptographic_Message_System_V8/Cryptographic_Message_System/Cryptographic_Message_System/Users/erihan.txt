@@ -1,7 +1,0 @@
-erihan
-as
-as
-2
-2:2:2
-XOR
-aaa

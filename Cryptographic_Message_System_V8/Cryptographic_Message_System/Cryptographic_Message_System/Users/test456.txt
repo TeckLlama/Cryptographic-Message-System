@@ -1,7 +1,0 @@
-test456
-Apple
-Windows
-99
-14:21:12
-XOR
-Hello World This is XOR Encryption
