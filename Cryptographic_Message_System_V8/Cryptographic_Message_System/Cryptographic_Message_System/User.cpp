@@ -9,6 +9,7 @@
 #include <fstream>
 #include"md5.h"
 
+
 MD5 md5;
 Time a;
 SaveFile sF;
@@ -74,8 +75,10 @@ void User::generateSaltPassHash()
 	std::stringstream ss;
 	ss << salt;
 	ss >> username;
+
 	std::cout << "Enter Password --> ";
 	std::cin >> userPasswordPlainText;
+
 	strcat_s(saltPlusPass, salt);
 	strcat_s(saltPlusPass, userPasswordPlainText);
 	hashedSaltPassword = md5.digestString(saltPlusPass);
@@ -174,50 +177,53 @@ void User::updateUserProfile()
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
 
-void User::profileEncrypt()
-{
-	std::ifstream inputUserProfileFile;
-	//std::cout << "Enter your Username --> ";
-	//std::cin >> username;
-	inputUserProfileFile.open("./Users/" + username + ".txt");
-	if (inputUserProfileFile.fail())
-	{// if input fails retry intput
-		do {// untill profile is open
-			std::cout << "Couldn't open Profile \n";
-			std::cout << "Enter your Username --> ";
-			std::cin >> username;
-			inputUserProfileFile.open(username + ".txt");
-		} while (!inputUserProfileFile.is_open());
-	}
-	std::stringstream strStream;
-	strStream << inputUserProfileFile.rdbuf();
-	std::string encryptProfile = strStream.str();
-	inputUserProfileFile.close();
-	x0.encryptProfileXOR(encryptProfile, username, username);
+//void User::profileEncrypt()
+//{
+//	std::ifstream inputUserProfileFile;
+//	//std::cout << "Enter your Username --> ";
+//	//std::cin >> username;
+//	inputUserProfileFile.open("./Users/" + username + ".txt");
+//	if (inputUserProfileFile.fail())
+//	{// if input fails retry intput
+//		do {// untill profile is open
+//			std::cout << "Couldn't open Profile \n";
+//			std::cout << "Enter your Username --> ";
+//			std::cin >> username;
+//			inputUserProfileFile.open(username + ".txt");
+//		} while (!inputUserProfileFile.is_open());
+//	}
+//	std::stringstream strStream;
+//	strStream << inputUserProfileFile.rdbuf();
+//	std::string encryptProfile = strStream.str();
+//	inputUserProfileFile.close();
+//	std::cout << encryptProfile;
+//	x0.encryptProfileXOR(encryptProfile, username, username);
+//
+//}
 
-}
-
-void User::profileDecrypt()
-{
-	std::ifstream inputUserProfileFile;
-	//std::cout << "Enter your Username --> ";
-	//std::cin >> username;
-	inputUserProfileFile.open("./Users/" + username + ".txt");
-	if (inputUserProfileFile.fail())
-	{// if input fails retry intput
-		do {// untill profile is open
-			std::cout << "Couldn't open Profile \n";
-			std::cout << "Enter your Username --> ";
-			std::cin >> username;
-			inputUserProfileFile.open(username + ".txt");
-		} while (!inputUserProfileFile.is_open());
-	}
-	std::stringstream strStream;
-	strStream << inputUserProfileFile.rdbuf();
-	std::string decryptProfile = strStream.str();
-	inputUserProfileFile.close();
-	x0.decryptProfileXOR(decryptProfile, username, username);
-}
+//void User::profileDecrypt()
+//{
+//	std::ifstream inputUserProfileFile;
+//	//std::cout << "Enter your Username --> ";
+//	//std::cin >> username;
+//	inputUserProfileFile.open("./Users/" + username + ".txt");
+//	if (inputUserProfileFile.fail())
+//	{// if input fails retry intput
+//		do {// untill profile is open
+//			std::cout << "Couldn't open Profile \n";
+//			std::cout << "Enter your Username --> ";
+//			std::cin >> username;
+//			inputUserProfileFile.open(username + ".txt");
+//		} while (!inputUserProfileFile.is_open());
+//	}
+//	std::stringstream strStream;
+//	strStream << inputUserProfileFile.rdbuf();
+//	std::string decryptProfile = strStream.str();
+//	/*std::string decryptProfile;
+//	std::getline(inputUserProfileFile, decryptProfile, inputUserProfileFile.eof);*/
+//	inputUserProfileFile.close();
+//	x0.decryptProfileXOR(decryptProfile, username, username);
+//}
 
 void User::userLogIn()
 {// y/n input to openProfile or createUserProfile
@@ -231,16 +237,14 @@ void User::userLogIn()
 		inputUserHash.open("./Users/" + username + "hash.txt");
 		if (inputUserHash.fail())
 		{// if input fails retry intput
-			do {// untill profile is open
-				generateSaltPassHash();
-				inputUserHash.open("./Users/" + username + "hash.txt");
-			} while (!inputUserHash.is_open());
+			std::cout << "Incorrect password or user try again\n";
+			userLogIn();
 		}//  read user profile line by line
 		std::getline(inputUserHash, userSavedHash);
 		inputUserHash.close();
 		if (userSavedHash == hashedSaltPassword)
 		{
-			profileDecrypt();
+			//profileDecrypt();
 			openProfile();
 		}
 		else
@@ -257,5 +261,5 @@ void User::userLogIn()
 }
 void User::profileLogOut()
 {
-	profileEncrypt();
+	//profileEncrypt();
 }

@@ -1,7 +1,7 @@
 test
-rr
-rr
-32
-23:23:23
+elliot
+riha
+23
+12:12:12
 XOR
-wewewewewew
+hellow world 
