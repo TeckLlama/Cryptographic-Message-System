@@ -52,7 +52,6 @@ int menu()
 int main()
 {
 	system("Title Cryptographic Message System");
-	std::cout << "Cryptographic Message System\n";
 	t.userLogIn();
 	menu();
 }
