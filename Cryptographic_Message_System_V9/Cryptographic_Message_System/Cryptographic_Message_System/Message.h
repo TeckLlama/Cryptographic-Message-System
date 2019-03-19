@@ -14,7 +14,7 @@ public:
 	std::string fileName;
 	std::string encryptionMethod;
 	std::string encryptedMessage;
-	std::string xorKey;
+	char xorKey[];
 
 	//std::string sha256(const std::string str);
 

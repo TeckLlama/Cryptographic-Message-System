@@ -44,7 +44,8 @@ void Message::decryptMessage(User t2)
 		} while (!inputEncryptedMessage.is_open());
 	}
 	std::getline(inputEncryptedMessage, encryptionMethod);
-	std::getline(inputEncryptedMessage, encryptedMessage, (char) inputEncryptedMessage.eof());
+	std::getline(inputEncryptedMessage, encryptedMessage);
+
 	if (encryptionMethod != "XOR" && encryptionMethod != "ROT13" && encryptionMethod != "ROT47")
 	{
 		std::cout << "Error Encryption Method is not correct check file and start again\n";

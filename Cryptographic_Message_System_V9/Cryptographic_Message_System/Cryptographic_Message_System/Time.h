@@ -14,9 +14,9 @@ public:
 	int userTimeSS;
 
 	std::string timeHHMMSS();
-	int timeHH();
-	int timeMM();
-	int timeSS();
+	std::string timeHH();
+	std::string timeMM();
+	std::string timeSS();
 private:	
 
 

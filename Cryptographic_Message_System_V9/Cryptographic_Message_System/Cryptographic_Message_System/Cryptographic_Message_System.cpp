@@ -41,8 +41,6 @@ int menu()
 	if (eDL == 'l' || eDL == 'L')
 	{
 		t.profileLogOut();
-		User t1;
-		t = t1;
 		return 0;
  	}
 

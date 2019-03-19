@@ -13,7 +13,7 @@
 MD5 md5;
 Time a;
 SaveFile sF;
-XOR x0;
+//XOR x0;
 
 void User::cinYesOrNo(std::string yNQuestion)
 { // cinYesOrNo is used to get input of Y or N from user 
@@ -72,13 +72,8 @@ void User::generateSaltPassHash()
 {
 	std::cout << "Enter Username --> ";
 	std::cin >> salt;
-	std::stringstream ss;
-	ss << salt;
-	ss >> username;
-
 	std::cout << "Enter Password --> ";
 	std::cin >> userPasswordPlainText;
-
 	strcat_s(saltPlusPass, salt);
 	strcat_s(saltPlusPass, userPasswordPlainText);
 	hashedSaltPassword = md5.digestString(saltPlusPass);
@@ -104,6 +99,7 @@ void User::createUserProfile()
 	}
 	std::cin.ignore();
 	std::cin.clear();
+	userAgeString = std::to_string(userAge);
 	a.timeHHMMSS();
 	std::cout << "Encryption Methods XOR, ROT13, ROT47, more to be added\n";
 	std::cout << "Enter Encryption --> ";
@@ -119,7 +115,7 @@ void User::createUserProfile()
 	std::getline (std::cin, userMessage);
 	generateSaltPassHash();
 	sF.saveFile("./Users/" + username + "hash", hashedSaltPassword);
-	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
+	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + userAgeString + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
 	sF.saveFile("./Users/"+username, userProfile);
 	// COMMENTED OUT for itteration 1 screenshots
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
@@ -146,6 +142,7 @@ void User::updateUserProfile()
 		std::cin >> userAge;// cin to input age
 		std::cin.ignore();
 		std::cin.clear();
+		userAgeString = std::to_string(userAge);
 	}
 	cinYesOrNo("Do you want to change Time? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
@@ -172,7 +169,7 @@ void User::updateUserProfile()
 		std::cout << "Enter Message    --> ";
 		std::getline(std::cin, userMessage);
 	}
-	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
+	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + userAgeString + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
 	sF.saveFile("./Users/" + username, userProfile);
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
@@ -239,7 +236,7 @@ void User::userLogIn()
 		{// if input fails retry intput
 			std::cout << "Incorrect password or user try again\n";
 			userLogIn();
-		}//  read user profile line by line
+		}
 		std::getline(inputUserHash, userSavedHash);
 		inputUserHash.close();
 		if (userSavedHash == hashedSaltPassword)
