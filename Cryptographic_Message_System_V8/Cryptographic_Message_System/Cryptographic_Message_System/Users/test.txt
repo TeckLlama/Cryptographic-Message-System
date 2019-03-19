@@ -1,7 +1,7 @@
 test
-elliot
-riha
+newTime
+testing
 23
-12:12:12
+01:01:01
 XOR
-hellow world 
+hello

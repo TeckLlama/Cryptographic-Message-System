@@ -9,14 +9,14 @@ protected:
 	
 public:
 	std::string userTimeHHMMSS;
-	int userTimeHH;
-	int userTimeMM;
-	int userTimeSS;
+	std::string userTimeHH;
+	std::string userTimeMM;
+	std::string userTimeSS;
 
 	std::string timeHHMMSS();
-	int timeHH();
-	int timeMM();
-	int timeSS();
+	std::string timeHH();
+	std::string timeMM();
+	std::string timeSS();
 private:	
 
 
