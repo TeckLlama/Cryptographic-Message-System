@@ -6,7 +6,6 @@
 #include "SaveFile.h"
 #include "User.h"
 
-
 XOR x;
 ROT13 r;
 ROT47 R;
@@ -20,8 +19,6 @@ void Message::cinYesOrNo(std::string yNQuestion)
 	} while (std::cin.fail() || yesOrNo != 'y' && yesOrNo != 'n' && yesOrNo != 'Y' && yesOrNo != 'N');
 	std::cin.ignore();
 }
-
-
 
 void Message::decryptMessage(User t2)
 {
@@ -76,7 +73,6 @@ void Message::decryptMessage(User t2)
 
 		}
 	}
-
 }
 
 void Message::encryptMessage(User t2)
