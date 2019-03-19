@@ -1,59 +1,30 @@
-<<<<<<< HEAD
 ﻿  Message.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(15): error C2653: 'Message': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(19): error C2065: 'yesOrNo': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(20): error C2065: 'yesOrNo': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(26): error C2653: 'Message': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(31): error C2065: 'yesOrNo': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(34): error C2065: 'fileName': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(35): error C2065: 'fileName': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(41): error C2065: 'fileName': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(42): error C2065: 'fileName': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(45): error C2065: 'encryptionMethod': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(46): error C2065: 'encryptedMessage': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(47): error C2065: 'encryptionMethod': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(56): error C2065: 'encryptionMethod': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(59): error C2065: 'xorKey': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(60): error C2065: 'encryptedMessage': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(60): error C2065: 'xorKey': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(65): error C2065: 'encryptionMethod': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(67): error C2065: 'encryptedMessage': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(68): error C3867: 'ROT13::decryptROT13': non-standard syntax; use '&' to create a pointer to member
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(68): error C2297: '+': illegal, right operand has type 'void (__cdecl ROT13::* )(std::string)'
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(68): error C2660: 'SaveFile::saveFile': function does not take 1 arguments
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(71): error C3867: 'ROT13::decryptROT13': non-standard syntax; use '&' to create a pointer to member
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(71): error C2297: '+': illegal, right operand has type 'void (__cdecl ROT13::* )(std::string)'
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(71): error C2660: 'SaveFile::saveFile': function does not take 1 arguments
   c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\savefile.h(9): note: see declaration of 'SaveFile::saveFile'
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(71): error C2065: 'encryptionMethod': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(73): error C2065: 'encryptedMessage': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(74): error C3867: 'ROT47::decryptROT47': non-standard syntax; use '&' to create a pointer to member
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(74): error C2297: '+': illegal, right operand has type 'void (__cdecl ROT47::* )(std::string)'
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(74): error C2660: 'SaveFile::saveFile': function does not take 1 arguments
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(77): error C3867: 'ROT47::decryptROT47': non-standard syntax; use '&' to create a pointer to member
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(77): error C2297: '+': illegal, right operand has type 'void (__cdecl ROT47::* )(std::string)'
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(77): error C2660: 'SaveFile::saveFile': function does not take 1 arguments
   c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\savefile.h(9): note: see declaration of 'SaveFile::saveFile'
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(82): error C2653: 'Message': is not a class or namespace name
   ROT13.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(5): error C2653: 'ROT13': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(28): error C2065: 'encryptedROT13String': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(32): error C2653: 'ROT13': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(8): error C2653: 'ROT13': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(31): error C2065: 'encryptedROT13String': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot13.cpp(35): error C2653: 'ROT13': is not a class or namespace name
   ROT47.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(5): error C2653: 'ROT47': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(12): error C2065: 'encryptedROT47': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(17): error C2065: 'encryptedROT47': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(9): error C2653: 'ROT47': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(16): error C2065: 'encryptedROT47': undeclared identifier
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(21): error C2065: 'encryptedROT47': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(24): error C2065: 'encryptedROT47': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(27): error C2653: 'ROT47': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(25): error C2065: 'encryptedROT47': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(28): error C2065: 'encryptedROT47': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\rot47.cpp(31): error C2653: 'ROT47': is not a class or namespace name
   XOR.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(6): error C2653: 'XOR': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(8): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(14): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(8): error C2653: 'XOR': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(10): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(16): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(19): error C2653: 'XOR': is not a class or namespace name
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(21): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(27): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(18): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(21): error C2653: 'XOR': is not a class or namespace name
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(23): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(29): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(31): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
   Generating Code...
-=======
-﻿  Cryptographic_Message_System.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(50): warning C4715: 'menu': not all control paths return a value
-  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V8\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe
->>>>>>> parent of 709e2bb... Revert "Nothing major"

@@ -1,10 +1,16 @@
-#include "Message.h"
+#include <iostream>
+#include <string>
+#include <iostream>
+#include <string>
+#include <fstream>
 #include "pch.h"
 #include "ROT13.h"
 #include "ROT47.h"
 #include "XOR.h"
 #include "SaveFile.h"
 #include "User.h"
+#include "Message.h"
+
 
 XOR x;
 ROT13 r;

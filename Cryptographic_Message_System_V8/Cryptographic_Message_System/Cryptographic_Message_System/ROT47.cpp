@@ -1,6 +1,10 @@
 #include "ROT47.h"
 #include "pch.h"
 #include "User.h"
+#include <iostream>
+#include <string>
+#include "pch.h"
+#include "User.h"
 
 void ROT47::encryptROT47(std::string message)
 {

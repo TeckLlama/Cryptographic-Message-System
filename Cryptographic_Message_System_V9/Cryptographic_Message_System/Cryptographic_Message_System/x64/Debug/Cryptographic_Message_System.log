@@ -1,0 +1,18 @@
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v9\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v9\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Message.cpp
+  ROT13.cpp
+  ROT47.cpp
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
+  User.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v9\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v9\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  XOR.cpp
+  Generating Code...
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v9\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(50): warning C4715: 'menu': not all control paths return a value
+  LINK : C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V9\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe not found or not built by the last incremental link; performing full link
+  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V9\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe

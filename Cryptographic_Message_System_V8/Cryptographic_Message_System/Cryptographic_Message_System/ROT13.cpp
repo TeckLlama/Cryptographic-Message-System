@@ -1,6 +1,9 @@
 #include "ROT13.h"
 #include "pch.h"
 #include "User.h"
+#include <iostream>
+#include <string>
+#include "pch.h"
 
 void ROT13::encryptROT13(std::string encryptMessage)
 {

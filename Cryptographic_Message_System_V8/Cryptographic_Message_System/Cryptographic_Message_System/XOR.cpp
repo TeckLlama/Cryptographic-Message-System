@@ -1,4 +1,6 @@
 #include "XOR.h"
+#include <iostream>
+#include <string>
 #include "pch.h"
 #include "User.h"
 
