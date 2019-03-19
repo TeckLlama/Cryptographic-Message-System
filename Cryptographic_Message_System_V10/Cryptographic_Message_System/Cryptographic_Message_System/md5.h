@@ -4,7 +4,7 @@
 // Code C4996: 'sprintf:' This function / variable may be unsafe consider using sprintf_s
 // Lines 330 - 337
 // Code C4996: 'fopen:' This function / variable may be unsafe consider using fopen_s
-// Changes made on 
+// Changes made on 15/03/19
 
 
 #ifndef MD5_H
