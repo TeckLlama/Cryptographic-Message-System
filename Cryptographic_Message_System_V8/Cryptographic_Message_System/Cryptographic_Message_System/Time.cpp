@@ -2,76 +2,46 @@
 #include "Time.h"
 #include <string>
 
-std::string Time::timeHH()
+int Time::timeHH()
 {// checks input of HH is between 0 & 23 working 
-	int intTimeHH;
 	std::cout << "Enter Time HH    --> ";
-	std::cin >> intTimeHH;
-	while (std::cin.fail() || intTimeHH < 0 || intTimeHH > 23)
+	std::cin >> userTimeHH;
+	while (std::cin.fail() || userTimeHH < 0 || userTimeHH > 23)
 	{// while loop used for error validation
 		std::cout << "Error Enter Time HH --> ";
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cin >> intTimeHH;
+		std::cin >> userTimeHH;
 	}
-	if (intTimeHH <= 9)
-	{
-		userTimeHH = "0" + std::to_string(intTimeHH);
-	}
-	else
-	{
-		userTimeHH = std::to_string(intTimeHH);
-	}
-	
 	return userTimeHH;
 }
 	
-std::string Time::timeMM()
+int Time::timeMM()
 {// checks input of MM is between 0 & 59 working 
-	int intTimeMM;
 	std::cout << "Enter Time MM    --> ";
-	std::cin >> intTimeMM;
-	while (std::cin.fail() || intTimeMM < 0 || intTimeMM > 59)
+	std::cin >> userTimeMM;
+	while (std::cin.fail() || userTimeMM < 0 || userTimeMM > 59)
 	{// while loop used for error validation
 		std::cout << "Error Enter Time MM --> ";
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cin >> intTimeMM;
-	}
-	if (intTimeMM <= 9)
-	{
-		userTimeMM = "0" + std::to_string(intTimeMM);
-	}
-	else
-	{
-		userTimeHH = std::to_string(intTimeMM);
+		std::cin >> userTimeMM;
 	}
 	
 	return userTimeMM;
 }
 
-std::string Time::timeSS()
+int Time::timeSS()
 {// checks input of SS is between 0 & 59 working 
-	int intTimeSS;
 	std::cout << "Enter Time SS    --> ";
-	std::cin >> intTimeSS;
-	while (std::cin.fail() || intTimeSS < 0 || intTimeSS > 59)
+	std::cin >> userTimeSS;
+	while (std::cin.fail() || userTimeSS < 0 || userTimeSS > 59)
 	{// while loop used for error validation
 		std::cout << "Error Enter Time SS --> ";
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cin >> intTimeSS;
+		std::cin >> userTimeSS;
 	}
-	if (intTimeSS <= 9)
-	{
-		userTimeSS = "0" + std::to_string(intTimeSS);
-	}
-	else
-	{
-		userTimeSS = std::to_string(intTimeSS);
-	}
-
-
 	return userTimeSS;
 }
 
@@ -81,30 +51,7 @@ std::string Time::timeHHMMSS()
 	Time::timeHH();
 	Time::timeMM();
 	Time::timeSS();
-	userTimeHHMMSS = userTimeHH + ':' + userTimeMM + ':' +userTimeSS;
-
-	//if (userTimeHH <= 9 || userTimeMM <= 9 || userTimeSS <= 9)
-	//{
-	//	if(userTimeHH<=9)
-	//	{
-	//		userTimeHHMMSS += "0" + std::to_string(userTimeHH) + ":";
-	//		if (userTimeMM <= 9)
-	//		{
-	//			userTimeHHMMSS += "0" + std::to_string(userTimeMM) + ":";
-	//			if (userTimeSS <= 9)
-	//			{
-	//				userTimeHHMMSS += "0" + std::to_string(userTimeSS);
-	//			}
-	//		}
-
-
-	//	}
-
-
-	//}
-	//else
-	//{
-	//}
+	userTimeHHMMSS = std::to_string(userTimeHH) + ':' + std::to_string(userTimeMM) + ':' + std::to_string(userTimeSS);
 	std::cin.ignore();
 	std::cin.clear();
 	return userTimeHHMMSS;

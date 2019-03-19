@@ -1,2 +1,6 @@
 ROT47
+<<<<<<< HEAD
 kkkkkw6==@H mmmmm(~C=5A,.,.,.,.,.,.`a,b.`,bPQËPQËPËQPËPË
+=======
+kkkkLLLLLL,,,,,]]]]w6==@ (@C=5P[[[[kkkkmmmm...NNNNN
+>>>>>>> parent of 17733ca... Broken Project

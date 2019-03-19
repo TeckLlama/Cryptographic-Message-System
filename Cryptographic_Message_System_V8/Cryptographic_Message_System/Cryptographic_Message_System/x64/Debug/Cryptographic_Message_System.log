@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Message.cpp
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(15): error C2653: 'Message': is not a class or namespace name
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\message.cpp(19): error C2065: 'yesOrNo': undeclared identifier
@@ -49,3 +50,9 @@ c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(27): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
 c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\xor.cpp(29): error C2065: 'encryptDecryptMessageXOR': undeclared identifier
   Generating Code...
+=======
+﻿  User.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(342): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v8\cryptographic_message_system\cryptographic_message_system\md5.h(366): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V8\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe
+>>>>>>> parent of 17733ca... Broken Project

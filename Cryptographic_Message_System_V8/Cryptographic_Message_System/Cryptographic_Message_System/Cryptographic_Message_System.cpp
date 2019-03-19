@@ -42,27 +42,8 @@ int menu()
 	{
 		t.profileLogOut();
 		User t1;
-		Message m1;
-		t = t1;		
-		m = m1;
-		do {
-			std::cout << "\nLog In or Quit [L/Q] --> ";
-			std::cin >> eDL;
-		} while (std::cin.fail() || eDL != 'l' && eDL != 'q' && eDL != 'L' && eDL != 'Q');
-		//std::cin.ignore();
-		if (eDL == 'l' || eDL == 'L')
-		{
-			std::cout << "\nTHIS WILL NOT WORK\nTRY AT OWN RISK\n";
-			t.userLogIn();
-			menu();
-		}
-		else
-		{
-			return 0;
-		}
-		
-
-		
+		t = t1;
+		return 0;
  	}
 
 
