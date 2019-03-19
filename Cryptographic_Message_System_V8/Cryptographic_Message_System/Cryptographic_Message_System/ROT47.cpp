@@ -1,10 +1,6 @@
-#include "pch.h"
 #include "ROT47.h"
-#include "SaveFile.h"
+#include "pch.h"
 #include "User.h"
-#include <iostream>
-#include <string>
-SaveFile sF4;
 
 void ROT47::encryptROT47(std::string message)
 {
@@ -25,7 +21,6 @@ void ROT47::encryptROT47(std::string message)
 			encryptedROT47 += tempMessageChar;
 		}
 	} 
-	sF4.saveFile("./EncryptedROT47", "ROT47\n" + encryptedROT47);
 	std::cout << "\nEncrypted Message ROT47\n" << encryptedROT47;
 }
 
@@ -49,6 +44,5 @@ void ROT47::decryptROT47(std::string message)
 			decryptedROT47 += tempMessageChar;
 		} 
 	} 
-	sF4.saveFile("./DecryptedROT47", "ROT47\n" + decryptedROT47);
 	std::cout << "\nDecrypted Message ROT47\n" << decryptedROT47;
 }

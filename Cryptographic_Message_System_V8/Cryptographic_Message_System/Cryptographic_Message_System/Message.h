@@ -1,7 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "User.h"
+#include <iostream>
+#include <string>
+#include <fstream>
+
 
 
 class Message

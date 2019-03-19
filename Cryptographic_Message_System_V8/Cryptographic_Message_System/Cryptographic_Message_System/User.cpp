@@ -146,7 +146,9 @@ void User::updateUserProfile()
 		std::cin >> userAge;// cin to input age
 		std::cin.ignore();
 		std::cin.clear();
+		userAgeString = std::to_string(userAge);
 	}
+	
 	cinYesOrNo("Do you want to change Time? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
@@ -172,7 +174,7 @@ void User::updateUserProfile()
 		std::cout << "Enter Message    --> ";
 		std::getline(std::cin, userMessage);
 	}
-	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + std::to_string(userAge) + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
+	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + userAgeString + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
 	sF.saveFile("./Users/" + username, userProfile);
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }

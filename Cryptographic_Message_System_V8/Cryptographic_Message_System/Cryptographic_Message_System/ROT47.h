@@ -1,7 +1,9 @@
 #pragma once
-
 #include <iostream>
 #include <string>
+#include "pch.h"
+#include "User.h"
+
 class ROT47
 {
 public:

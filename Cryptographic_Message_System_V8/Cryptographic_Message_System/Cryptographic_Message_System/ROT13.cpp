@@ -1,11 +1,6 @@
-#include "pch.h"
 #include "ROT13.h"
-#include "SaveFile.h"
+#include "pch.h"
 #include "User.h"
-#include <iostream>
-#include <string>
-
-SaveFile sF2;
 
 void ROT13::encryptROT13(std::string encryptMessage)
 {
@@ -30,7 +25,7 @@ void ROT13::encryptROT13(std::string encryptMessage)
 			}
 		}
 	}	
-	sF2.saveFile("./EncryptedROT13", "ROT13\n" + encryptMessage);
+	encryptedROT13String = encryptMessage;
 	std::cout << "\nEncrypted Message ROT13\n" << encryptMessage;
 }
 
@@ -57,6 +52,5 @@ void ROT13::decryptROT13(std::string message)
 			}
 		}
 	}
-	sF2.saveFile("./DecryptedROT13", "ROT13\n" + message);
 	std::cout << "\nDecrypted Message ROT13\n" << message;
 }
