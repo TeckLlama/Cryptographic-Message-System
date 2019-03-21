@@ -11,5 +11,6 @@ void SaveFile::saveFile(std::string fileName, std::string stringToSave)
 	std::ofstream fileToSave(fileName + ".txt");
 	fileToSave << stringToSave;
 	fileToSave.close();
+	//std::cout << "TEST: Using saveFile class";
 	std::cout << "\n" << fileName << " has been saved\n";
 }

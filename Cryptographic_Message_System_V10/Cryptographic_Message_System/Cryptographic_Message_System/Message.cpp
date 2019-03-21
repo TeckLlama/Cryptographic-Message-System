@@ -84,18 +84,23 @@ void Message::encryptMessage(User t2)
 {
 	if (t2.userEncryption == "XOR")
 	{
+		//std::string testXORString = "TEST: This message is hard coded";
+		//std::string testXORKey = "test";
+		//std::cout << "TEST XOR KEY: " + testXORKey + "\n";
 		x.encryptXOR(t2.userMessage, t2.userLastName);
 		sF1.saveFile("./EncryptedXOR", "XOR\n" + x.encryptDecryptMessageXOR);
 
 	}
 	if (t2.userEncryption == "ROT13")
 	{
+		//std::string testROT13String = "TEST: This message was hard coded";
 		r.encryptROT13(t2.userMessage);
 		sF1.saveFile("./EncryptedROT13", "ROT13\n" + r.rot13ToSave);
 
 	}
 	if (t2.userEncryption == "ROT47")
 	{
+		//std::string testROT47String = "TEST: This message was hard coded";
 		R.encryptROT47(t2.userMessage);
 		sF1.saveFile("./EncryptedROT47", "ROT47\n" + R.encryptedROT47);
 

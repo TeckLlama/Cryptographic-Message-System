@@ -14,7 +14,6 @@ public:
 	void cinYesOrNo(std::string yNQuestion);
 	char yesOrNo;
 	std::string username;
-
 	std::string userFirstName;
 	std::string userLastName;
 	int userAge;
@@ -32,15 +31,10 @@ public:
 
 	std::string userSavedHash;
 
-	void profileEncrypt();
-	void profileDecrypt();
+	//void profileEncrypt();
+	//void profileDecrypt();
 
 	void profileLogOut();
-
-
-
-	
-	
 	//char* passPlusSaltToHash[];
 
 private:

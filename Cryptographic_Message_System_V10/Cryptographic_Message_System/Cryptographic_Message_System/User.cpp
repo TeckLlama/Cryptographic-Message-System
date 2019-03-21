@@ -70,27 +70,30 @@ void User::openProfile()
 
 void User::generateSaltPassHash()
 {
-	std::cout << "Enter Username --> ";
+	std::cout << "\tEnter Username --> ";
 	std::cin >> salt;
-	std::cout << "Enter Password --> ";
+	std::stringstream ss;
+	ss << salt;
+	ss >> username;
+	std::cout << "\tEnter Password --> ";
 	std::cin >> userPasswordPlainText;
 	strcat_s(saltPlusPass, salt);
 	strcat_s(saltPlusPass, userPasswordPlainText);
 	hashedSaltPassword = md5.digestString(saltPlusPass);
-	
+	//std::cout << "Test: Hashed SaltPassword\n" + hashedSaltPassword;	
 }
 
 void User::createUserProfile()
 {// getline used for input of strings 
-	std::cout << "Enter a Username --> ";
+	std::cout << "\tEnter a Username --> ";
 	std::getline (std::cin, username);
-	std::cout << "Enter First Name --> ";
+	std::cout << "\tEnter First Name --> ";
 	std::getline (std::cin, userFirstName);
-	std::cout << "Enter Last Name  --> ";
+	std::cout << "\tEnter Last Name  --> ";
 	std::getline (std::cin, userLastName);
-	std::cout << "Enter Age        --> ";
+	std::cout << "\tEnter Age        --> ";
 	std::cin >> userAge;// cin to input age
-	while (std::cin.fail())
+	while (std::cin.fail()|| userAge<0 || userAge >110)
 	{// while loop used for error validation
 		std::cout << "Error Enter Age --> ";
 		std::cin.clear();
@@ -102,7 +105,7 @@ void User::createUserProfile()
 	userAgeString = std::to_string(userAge);
 	a.timeHHMMSS();
 	std::cout << "Encryption Methods XOR, ROT13, ROT47, more to be added\n";
-	std::cout << "Enter Encryption --> ";
+	std::cout << "\tEnter Encryption --> ";
 	std::getline (std::cin, userEncryption);
 	if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
 	{// if userEncryption not valid retry 
@@ -111,7 +114,7 @@ void User::createUserProfile()
 			std::getline(std::cin, userEncryption);
 		} while (std::cin.fail() || userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47");
 	}
-	std::cout << "Enter Message    --> ";
+	std::cout << "\tEnter Message    --> ";
 	std::getline (std::cin, userMessage);
 	generateSaltPassHash();
 	sF.saveFile("./Users/" + username + "hash", hashedSaltPassword);
@@ -126,34 +129,41 @@ void User::updateUserProfile()
 	cinYesOrNo("Do you want to change First Name? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		std::cout << "Enter First Name --> ";
+		std::cout << "\tEnter First Name --> ";
 		std::getline(std::cin, userFirstName);
 	}
 	cinYesOrNo("Do you want to change Last Name? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		std::cout << "Enter Last Name  --> ";
+		std::cout << "\tEnter Last Name  --> ";
 		std::getline(std::cin, userLastName);
 	}
 	cinYesOrNo("Do you want to change Age? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		std::cout << "Enter Age        --> ";
+		std::cout << "\tEnter Age        --> ";
 		std::cin >> userAge;// cin to input age
 		std::cin.ignore();
 		std::cin.clear();
+		while (std::cin.fail() || userAge < 0 || userAge >110)
+		{// while loop used for error validation
+			std::cout << "Error Enter Age --> ";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cin >> userAge;
+		}
 		userAgeString = std::to_string(userAge);
 	}
 	cinYesOrNo("Do you want to change Time? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
-	{
+	{// time inputs moved to class 
 		a.timeHHMMSS();
 	}
 	cinYesOrNo("Do you want to change Encryption Method? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
-	{
+	{//validation for encryption methods
 		std::cout << "Encryption Methods XOR, ROT13, ROT47, more to be added\n";
-		std::cout << "Enter Encryption --> ";
+		std::cout << "\tEnter Encryption --> ";
 		std::getline(std::cin, userEncryption);
 		if (userEncryption != "XOR" && userEncryption != "ROT13" && userEncryption != "ROT47")
 		{// if userEncryption not valid retry 
@@ -166,14 +176,15 @@ void User::updateUserProfile()
 	cinYesOrNo("Do you want to change Message? ");
 	if (yesOrNo == 'Y' || yesOrNo == 'y')
 	{
-		std::cout << "Enter Message    --> ";
+		std::cout << "\tEnter Message    --> ";
 		std::getline(std::cin, userMessage);
 	}
 	userProfile = username + "\n" + userFirstName + "\n" + userLastName + "\n" + userAgeString + "\n" + a.userTimeHHMMSS + "\n" + userEncryption + "\n" + userMessage;
 	sF.saveFile("./Users/" + username, userProfile);
 	//std::cout << "\n" << userProfile //// There for test to print userProfile before saving worker
 }
-
+// This code was used to encrrypt profile using XOR
+// Due to unreliable resaults currently not in use 
 //void User::profileEncrypt()
 //{
 //	std::ifstream inputUserProfileFile;
@@ -197,7 +208,6 @@ void User::updateUserProfile()
 //	x0.encryptProfileXOR(encryptProfile, username, username);
 //
 //}
-
 //void User::profileDecrypt()
 //{
 //	std::ifstream inputUserProfileFile;
@@ -249,7 +259,6 @@ void User::userLogIn()
 			std::cout << "Incorrect password or user try again\n";
 			userLogIn();
 		}
-
 	}
 	else
 	{
@@ -258,5 +267,7 @@ void User::userLogIn()
 }
 void User::profileLogOut()
 {
+	std::cout << "\n" + username + " has logged out. Goodbye " + userFirstName;
+	std::cout << "\nCMS will close.";
 	//profileEncrypt();
 }

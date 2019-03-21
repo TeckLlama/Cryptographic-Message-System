@@ -1,4 +1,0 @@
-﻿  Message.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): warning C4200: nonstandard extension used: zero-sized array in struct/union
-  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
-  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V10\Cryptographic_Message_System\x64\Debug\Cryptographic_Message_System.exe

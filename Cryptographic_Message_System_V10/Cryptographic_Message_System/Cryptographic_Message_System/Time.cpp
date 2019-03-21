@@ -4,7 +4,7 @@
 
 std::string Time::timeHH()
 {// checks input of HH is between 0 & 23 working 
-	std::cout << "Enter Time HH    --> ";
+	std::cout << "\tEnter Time HH    --> ";
 	std::cin >> userTimeHH;
 	while (std::cin.fail() || userTimeHH < 0 || userTimeHH > 23)
 	{// while loop used for error validation
@@ -26,7 +26,7 @@ std::string Time::timeHH()
 	
 std::string Time::timeMM()
 {// checks input of MM is between 0 & 59 working 
-	std::cout << "Enter Time MM    --> ";
+	std::cout << "\tEnter Time MM    --> ";
 	std::cin >> userTimeMM;
 	while (std::cin.fail() || userTimeMM < 0 || userTimeMM > 59)
 	{// while loop used for error validation
@@ -48,7 +48,7 @@ std::string Time::timeMM()
 
 std::string Time::timeSS()
 {// checks input of SS is between 0 & 59 working 
-	std::cout << "Enter Time SS    --> ";
+	std::cout << "\tEnter Time SS    --> ";
 	std::cin >> userTimeSS;
 	while (std::cin.fail() || userTimeSS < 0 || userTimeSS > 59)
 	{// while loop used for error validation

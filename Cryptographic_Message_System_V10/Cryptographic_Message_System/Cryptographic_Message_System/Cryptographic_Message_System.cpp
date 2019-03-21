@@ -9,19 +9,13 @@
 #include "Message.h"
 #include <iostream>
 #include <string>
-#include <fstream>
-#include "md5.h"
 #include <stdio.h>
-
-
 
 User t;
 Message m;
 
-
-
 int menu()
-{
+{// char eDL used to navigate menu
 	char eDL;
 	do {
 		std::cout << "\nEncrypt, Decrypt or Log Out[E/D/L] --> ";
@@ -39,17 +33,17 @@ int menu()
 		menu();
 	}
 	if (eDL == 'l' || eDL == 'L')
-	{
+	{// if user chooses logo out return 0 will close program 
 		t.profileLogOut();
 		return 0;
  	}
-
-
 }
+
 
 int main()
 {
 	system("Title Cryptographic Message System");
+	std::cout << "\t\t\t\t\t\tCryptographic Message System\n";
 	t.userLogIn();
 	menu();
 }

@@ -1,5 +1,19 @@
-﻿  Cryptographic_Message_System.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\md5.h(296): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v7\cryptographic_message_system\cryptographic_message_system\md5.h(319): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+﻿  pch.cpp
+  Cryptographic_Message_System.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+  Message.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\message.h(17): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+  ROT13.cpp
+  ROT47.cpp
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\rot47.cpp(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\rot47.cpp(32): warning C4018: '<': signed/unsigned mismatch
+  RSA.cpp
+  SaveFile.cpp
+  Time.cpp
+  User.cpp
+  XOR.cpp
+  Generating Code...
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v10\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(40): warning C4715: 'menu': not all control paths return a value
+  Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V10\Cryptographic_Message_System\Debug\Cryptographic_Message_System.exe
