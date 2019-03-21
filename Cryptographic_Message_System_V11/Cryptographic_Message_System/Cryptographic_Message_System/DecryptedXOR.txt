@@ -1,0 +1,2 @@
+XOR
+TEST: This message is hard coded
