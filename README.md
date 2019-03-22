@@ -4,7 +4,7 @@ For this project I have been tasked with creating a Cryptographic Messaging Syst
 ## Getting Started
 Cryptographic Message System has been writen in C++ using Visual Studio 2017.
 
-The CMS.exe file uses the Users directory two test account are provided credentials are bellow
+The CMS.exe uses the Users directory two test account are provided credentials are bellow
 
 * jblogs
 * password
