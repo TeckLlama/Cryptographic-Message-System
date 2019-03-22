@@ -1,7 +1,0 @@
-test
-ellior
-rihan
-23
-12:12:12
-XOR
-hello

@@ -1,7 +1,0 @@
-erihantest
-wlluit
-eugB
-12
-12:12:12
-XOR
-WAG1

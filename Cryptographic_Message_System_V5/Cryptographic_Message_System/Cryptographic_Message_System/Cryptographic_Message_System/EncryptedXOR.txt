@@ -1,3 +1,0 @@
-XOR
-TXN;S=T
-	 SWag 1 you fucking 

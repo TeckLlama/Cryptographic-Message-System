@@ -1,7 +1,0 @@
-test
-test
-test
-23
-23:23:23
-XOR
-Hello World

@@ -1,6 +1,0 @@
-ROT47
-<<<<<<< HEAD
-<<<<<Hellow >>>>>WOrldp[][][][][][]12[3]1[3!"ú!"ú!ú"!ú!ú
-=======
-<<<<<Hellow world>>>>>>>
->>>>>>> parent of 709e2bb... Revert "Nothing major"

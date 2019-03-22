@@ -1,7 +1,0 @@
-test12
-eeeee
-eeee
-12
-12:12:12
-XOR
-wag1

@@ -12,6 +12,18 @@
 
 void XOR::encryptXOR(std::string message, std::string key)
 { // encryptDecryptXOR uses a for loop and XOR function
+	std::cout << "\nBy default you last name is used as the XOR Key\n";
+	char yesOrNo;
+	do {		
+		std::cout << "Do you want to change the XOR Key [Y/N] --> ";
+		std::cin >> yesOrNo;
+	} while (std::cin.fail() || yesOrNo != 'y' && yesOrNo != 'n' && yesOrNo != 'Y' && yesOrNo != 'N');
+	std::cin.ignore();
+	if (yesOrNo == 'Y' || yesOrNo == 'y')
+	{
+		std::cout << "\nPlese enter the XOR Key --> ";
+		std::cin >> key;
+	}
 	encryptDecryptMessageXOR = "";
 	int messageLength = (int)message.length();
 	int keyLength = (int)key.length();

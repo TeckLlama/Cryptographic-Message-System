@@ -1,7 +1,0 @@
-what
-rob
-buxton
-21
-21:21:45
-XOR
-rob is cool

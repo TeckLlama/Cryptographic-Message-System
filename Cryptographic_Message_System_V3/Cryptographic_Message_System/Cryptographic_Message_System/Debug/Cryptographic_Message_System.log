@@ -1,7 +1,0 @@
-﻿  pch.cpp
-  Cryptographic_Message_System.cpp
-  Time.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v3\cryptographic_message_system\cryptographic_message_system\time.cpp(19): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  User.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v3\cryptographic_message_system\cryptographic_message_system\user.cpp(15): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  Generating Code...
