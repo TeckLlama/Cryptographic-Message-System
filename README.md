@@ -4,7 +4,7 @@ For this project I have been tasked with creating a Cryptographic Messaging Syst
 ## Getting Started
 Cryptographic Message System has been writen in C++ using Visual Studio 2017.
 
-The CMS.exe uses the Users directory two test account are provided credentials are bellow
+The CMS.exe uses the Users directory two test account are provided credentials are bellow.
 
 * jblogs
 * password
@@ -19,7 +19,7 @@ The CMS.exe uses the Users directory two test account are provided credentials a
 * Time input validation in some scenarios prints twice.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](docs/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/TeckLlama/Cryptographic-Message-System/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
 * Sanya Tayal's answer on [Stack Overflow](https://stackoverflow.com/a/52168041).
