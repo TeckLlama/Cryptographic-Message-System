@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 19/02/19
+// Last Modified Date: 21/03/19
+// Description: C++ Class that manages a user profile use with User.h.
+// User.cpp: This file contains the functions for the User class.
 #include "pch.h"
 #include "User.h"
 #include "Time.h"

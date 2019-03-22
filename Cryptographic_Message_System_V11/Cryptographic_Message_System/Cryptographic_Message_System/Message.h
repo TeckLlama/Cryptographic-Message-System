@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 19/02/19
+// Last Modified Date: 21/03/19
+// Description: C++ Class that handles messages from the User Class use with Message.cpp.
+// Message.h: This file declares the functions and variables for the Message Class.
 #pragma once
 #include <iostream>
 #include <string>

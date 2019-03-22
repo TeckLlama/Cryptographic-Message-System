@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 19/02/19
+// Last Modified Date: 21/03/19
+// Description: C++ Class that manages a user profile use with User.cpp.
+// User.h: This file declares the functions and variables for the User Class.
 #pragma once
 #include <iostream>
 #include <string>

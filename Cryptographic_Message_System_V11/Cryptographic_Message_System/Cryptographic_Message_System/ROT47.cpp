@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 25/02/19
+// Last Modified Date: 01/03/19
+// Description: C++ Class that encrypts strings using ROT47 use with ROT47.h.
+// ROT47.cpp: This file contains the functions for the ROT47 class.
 #include "pch.h"
 #include "ROT47.h"
 #include "User.h"

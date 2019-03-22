@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 25/02/19
+// Last Modified Date: 01/03/19
+// Description: C++ Class that encrypts saves strings to s text file use with SaveFile.h.
+// SaveFile.cpp: This file contains the functions for the SaveFile class.
 #include "pch.h"
 #include "User.h"
 #include "SaveFile.h"

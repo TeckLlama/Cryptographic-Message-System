@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 19/02/19
+// Last Modified Date: 18/03/19
+// Description: C++ Class that encrypts strings using ROT13 use with ROT13.h.
+// ROT13.cpp: This file contains the functions for the ROT13 class.
 #include "pch.h"
 #include "ROT13.h"
 #include "User.h"

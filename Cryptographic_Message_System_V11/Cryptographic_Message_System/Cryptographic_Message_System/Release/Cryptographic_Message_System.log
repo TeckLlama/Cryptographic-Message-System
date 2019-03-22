@@ -1,22 +1,21 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Cryptographic_Message_System.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  pch.cpp
   Cryptographic_Message_System.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(17): warning C4200: nonstandard extension used: zero-sized array in struct/union
-  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(17): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(22): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(22): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
   Message.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(17): warning C4200: nonstandard extension used: zero-sized array in struct/union
-  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(17): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(22): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\message.h(22): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
   ROT13.cpp
   ROT47.cpp
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\rot47.cpp(9): warning C4018: '<': signed/unsigned mismatch
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\rot47.cpp(32): warning C4018: '<': signed/unsigned mismatch
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\rot47.cpp(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\rot47.cpp(37): warning C4018: '<': signed/unsigned mismatch
   RSA.cpp
   SaveFile.cpp
-  Time.cpp
   User.cpp
   XOR.cpp
   Generating code
-c:\users\elliot rihan\github\cryptographic_message_system\cryptographic_message_system_v11\cryptographic_message_system\cryptographic_message_system\cryptographic_message_system.cpp(40): warning C4715: 'menu': not all control paths return a value
-  All 332 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 332 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Cryptographic_Message_System.vcxproj -> C:\Users\Elliot Rihan\GitHub\Cryptographic_Message_System\Cryptographic_Message_System_V11\Cryptographic_Message_System\Release\CMS.exe

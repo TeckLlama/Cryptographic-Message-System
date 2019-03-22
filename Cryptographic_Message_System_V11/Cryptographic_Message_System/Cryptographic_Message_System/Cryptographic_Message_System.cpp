@@ -1,9 +1,8 @@
 // Author: Elliot Rihan
 // Created: 19/02/19
-// Last Modified Date: 
-// Description: C++ program 
+// Last Modified Date: 21/03/19
+// Description: C++ program that encrypts users messages using a variety of encryption methods.
 // Cryptographic_Message_System.cpp: This file contains the 'main' function. Program execution begins and ends there.
-
 #include "pch.h"
 #include "User.h"
 #include "Message.h"

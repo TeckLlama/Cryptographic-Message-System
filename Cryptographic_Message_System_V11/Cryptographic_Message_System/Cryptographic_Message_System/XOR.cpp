@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 19/02/19
+// Last Modified Date: 15/03/19
+// Description: C++ Class that encrypts strings using XOR use with XOR.h.
+// XOR.cpp: This file contains the functions for the XOR class.
 #include "pch.h"
 #include "XOR.h"
 #include "User.h"
