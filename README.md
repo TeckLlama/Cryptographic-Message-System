@@ -14,9 +14,9 @@ The CMS.exe uses the Users directory two test account are provided credentials a
 ## Current Known Bugs
 * **If user types an incorrect Username or Password application will not log in.**
 * Some XOR Encrypted messages cause first character of next line in console to be deleted.
-* User can type in age value that includes character in some cinarios.
+* User can type in age value that includes character in some scenarios.
 * Time input incorrect order of asking user (Currently SS, MM then HH should be HH first).
-* Time input validation in some cinarios prints twice.
+* Time input validation in some scenarios prints twice.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](docs/LICENSE.md) file for details
