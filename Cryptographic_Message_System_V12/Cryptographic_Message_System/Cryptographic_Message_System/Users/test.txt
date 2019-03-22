@@ -1,0 +1,7 @@
+test
+test
+test
+100
+12:12:12
+XOR
+Hello world

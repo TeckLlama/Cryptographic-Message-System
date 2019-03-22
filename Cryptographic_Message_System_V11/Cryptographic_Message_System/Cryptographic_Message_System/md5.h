@@ -1,3 +1,8 @@
+// Author: Elliot Rihan
+// Created: 14/03/19
+// Last Modified Date: 21/03/19
+// Description: C++ Class that generates hash values from char variables.
+// md5.h: This file declares the functions and variables for the MD5 Class.
 // Source https://stackoverflow.com/a/52168041
 // Some changes were required to prevent the following errors:
 // Lines 306 - 309
